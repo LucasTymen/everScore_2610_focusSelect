@@ -166,6 +166,7 @@
         .detail-btn:hover, .detail-btn.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; }
         .toc { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; line-height: 2.1; }
         .toc a { margin-right: 12px; font-weight: 600; }
+        .note-line { font-size: 13px; color: #664d03; background: #fff8e1; border-left: 3px solid #ffc107; padding: 5px 10px; margin: 6px 0 0 0; border-radius: 4px; }
         /* legacy V4 blocks kept for badges/toolbar */
         .badge { display: inline-block; font-size: 12px; padding: 2px 9px; border-radius: 10px; font-weight: 600; vertical-align: middle; margin-left: 8px; }
         .badge.essential { background: #28a745; color: #fff; }
@@ -187,26 +188,32 @@
     <div class="info-box">
         <h3>📋 Interview: Thursday 29 October 2026, 11:30 am Paris time — Microsoft Teams, ~1 hour, in English</h3>
         <p>Role: <strong>AV &amp; IT Support Technician</strong> — Evercore Paris, rue de Courcelles. Interviewers: Alex Dyson (AV Support Lead EMEA/APAC), Adeal Hafeez (Desktop Engineer, London), German Moura (AV Technician).</p>
-        <p><strong>How to use this trainer:</strong> every question starts with a <strong>SHORT ANSWER</strong> to say aloud (10–25 words). "IF THEY ASK MORE" and the technical note are for follow-ups. Use the toolbar for quick revision and search.</p>
+        <p><strong>How to use this sheet:</strong> questions and answers in English are for oral practice; the ⚠️ French notes flag the reliability limits of each claim. Answers describing procedures are hypothetical scenarios, not lived incidents. Use the contents menu to jump, the search box to filter.</p>
     </div>
 
+    
     <div class="toc">
         <strong>Contents — click to jump:</strong><br>
-        <a href="#g01">01 Introduction</a>
-        <a href="#g02">02 Daily operations</a>
-        <a href="#g03">03 AV systems</a>
-        <a href="#g04">04 Troubleshooting</a>
-        <a href="#g05">05 Windows</a>
-        <a href="#g06">06 Networking</a>
-        <a href="#g07">07 Security</a>
-        <a href="#g08">08 APSI</a>
-        <a href="#g09">09 Behavioural</a>
-        <a href="#g10">10 Simulation</a>
-        <a href="#g11">11 Quick revision</a>
-        <a href="#g12">12 Reference</a>
+        <a href="#sec0">🧭 0. Immediate reference points</a>
+        <a href="#sec00">00</a>
+        <a href="#sec01">01</a>
+        <a href="#sec02">02</a>
+        <a href="#sec10">10</a>
+        <a href="#sec11">11</a>
+        <a href="#sec12">12</a>
+        <a href="#sec03">03</a>
+        <a href="#sec04">04</a>
+        <a href="#sec05">05</a>
+        <a href="#sec06">06</a>
+        <a href="#sec07">07</a>
+        <a href="#sec13">13. Exemples personnels à compléter</a>
+        <a href="#sec14">❓ 14 Questions to ask & interview rules</a>
+        <a href="#sec15">15. Antisèche</a>
+        <a href="#sec16">🛡️ 16 Reliability notes & corrections</a>
+        <a href="#g12">📚 Technical reference (deep material)</a>
     </div>
 
-    <div class="toolbar">
+<div class="toolbar">
         <input type="text" id="searchBox" placeholder="Search questions or technical terms… (e.g. echo, DNS, Crestron)">
         <button id="expandAll">Expand all</button>
         <button id="collapseAll">Collapse all</button>
@@ -215,1206 +222,729 @@
     <!-- ========================================
          01 — INTRODUCTION
     ======================================== -->
-    <button class="accordion" id="g01">01 🎤 Introduction &amp; motivation</button>
+        <button class="accordion" id="sec0">🧭 0. Immediate reference points</button>
     <div class="panel">
-        <div class="group-intro">Say each answer aloud in under 30 seconds. Learn the SHORT ANSWER by heart; expand only if invited.</div>
-
         <div class="qa">
-            <p class="q">Q1.1: Tell us about yourself. <span class="badge essential">Essential</span></p>
-            <p class="ans">"Thank you for inviting me. I'm Lucas Tymen. I have twenty-two years of experience in IT support, and I'm coming back to hands-on roles. I like solving real problems for real people — that's this job."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "For about twenty-two years I worked at APSI, a healthcare association. I looked after systems, networks and user support for about three hundred workstations across several sites. I also supported a board meeting with around 130 people — I managed microphones, replaced low batteries and adjusted audio levels. Since 2022, I have trained in development, Linux and automation. Now I want to return to hands-on IT support."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> The pitch is ~60 seconds: thanks → APSI (healthcare association, 22 years, 300 workstations, multisite) → board-meeting example (130 people, microphones, batteries, audio levels) → skills since 2022 → motivation. Never say "an IT services company".</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>twenty-two years, healthcare association, hands-on, helping people, solving problems.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.2: Walk us through your background. <span class="badge essential">Essential</span></p>
-            <p class="ans">"I started in IT in the early 2000s. At APSI, a healthcare association, I covered user support end to end — workstations, systems, networks, documentation and preventive maintenance."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I worked across several sites, so I learned to prioritise and to stay calm with users under pressure. Since 2022 I have trained in web development, then Java and Angular, and I automated tasks with Python. That made me faster at diagnosing problems and clearer in my documentation."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Deployment, incident fixing, preventive maintenance, documentation are confirmed. No invented AV deployments.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>multisite, prioritise, preventive maintenance, documentation.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.3: Why Evercore? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Evercore is a leading independent investment bank. In that world, meeting rooms are business-critical — if a video call fails, clients feel it. I like that level of expectation."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "The role combines AV and desktop support, which matches my profile: hands-on experience, methodical diagnostics, and a real interest in audiovisual technology. And I would enjoy working with the teams in Paris and London."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Keep it factual and public: independent advisory firm, founded 1995, headquartered in New York. Promise nothing about the real room architecture.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>business-critical rooms, independent bank, AV + desktop, Paris–London.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.4: Why return to support after moving into development? <span class="badge essential">Essential</span></p>
-            <p class="ans">"My move into development was deliberate, and it worked — I now read logs faster and automate repetitive tasks. But what motivates me most is helping users directly."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "So a hands-on support role is not a step back. It's a deliberate choice, with stronger skills than before."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Never say "development didn't work out". Development = tooling; support = motivation.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>deliberate choice, stronger skills, helping users.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.5: Why did you move into development in the first place? <span class="badge useful">Useful</span></p>
-            <p class="ans">"Two reasons. I wanted structured, certified training after twenty years in operations. And support was becoming automated — I wanted to build automation, not just use it."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I trained at Le Wagon in 2022, then in Java, Spring and Angular in 2023. That experience helps me every day in diagnostics and scripting."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>Le Wagon 2022, Java/Spring/Angular 2023, automation.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.6: What are your strengths and weaknesses? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Three strengths: I check methodically instead of guessing, I document everything, and I stay calm under pressure. One honest weakness: I haven't administered Crestron or Q-SYS in production yet."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "So my first weeks would be about learning the rooms here, fast. I've done that before — I learn quickly when documentation exists, and I'm not afraid to ask."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> The weakness must be true and mastered: conceptual understanding + proven learning ability (Le Wagon, Aston). Never claim to have administered Crestron.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>methodical, documentation, calm, honest limitation, fast learner.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.7: Why should we hire you? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Because I bring the complete support package: twenty-two years of hands-on operations, solid Windows, networks and Microsoft 365, plus the AV fundamentals you can hear in this interview."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Crestron I will learn — the support discipline you cannot teach in six months. And my record shows I learn fast: two training programmes completed to real projects."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>complete package, support discipline, proven learning.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.8: Why you rather than a candidate with direct Crestron experience? <span class="badge essential">Essential</span></p>
-            <p class="ans">"A Crestron specialist arrives with one strength. I arrive with the complete package — and most incidents actually live in Windows, networks and Microsoft 365, which I've done for twenty-two years."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Crestron I will learn; the support discipline you cannot teach in six months. Say it slowly — this is your differentiator."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>breadth, most incidents are desktop/network, discipline.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.9: Where do you see yourself in five years? <span class="badge useful">Useful</span></p>
-            <p class="ans">"I'd like to be the technician the team trusts with the most critical rooms — fully autonomous on Crestron and Q-SYS, maybe mentoring a future colleague."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I like deep expertise. I'd rather master this environment than change environment every two years."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>autonomous, critical rooms, mentoring, stability.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.10: How would you work with a manager based abroad (Alex)? <span class="badge useful">Useful</span></p>
-            <p class="ans">"With clear written updates and proactive communication. I keep my manager informed without being asked — for example, a short daily summary of room checks and open incidents."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I follow the existing procedures, and when something is new to me, I ask for guidance instead of improvising."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>written updates, proactive, procedures, ask early.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.11: What are your salary expectations? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I've looked at the market for AV and IT support roles in Paris. I'm looking for a package consistent with twenty-two years of hands-on experience, and I'm happy to discuss the details with Natalie."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="tip tech-note"><strong>TO BE COMPLETED (confirm before the interview):</strong> your researched salary range. If pressed for a number, give the researched range only, anchored on your experience. Do not throw out the first figure.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>market-researched, consistent with experience, flexible structure.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q1.12: What is your notice period, and do you have questions for us? <span class="badge essential">Essential</span></p>
-            <p class="ans">"My notice period is [confirm before the interview]." — then close with: "Could you describe the morning room checks in the Paris office? And what documentation exists for the meeting-room systems?"</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="tip tech-note"><strong>TO BE COMPLETED (fact):</strong> your real notice period / start date. No questions about salary, contract or process at the end.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>notice period, morning checks, documentation.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         02 — AV DAILY OPERATIONS
-    ======================================== -->
-    <button class="accordion" id="g02">02 🔧 AV daily operations</button>
-    <div class="panel">
-        <div class="group-intro">The recruiter explicitly asked for morning preventive room checks. This group is where you show you already think like the job.</div>
-
-        <div class="qa">
-            <p class="q">Q2.1: What does your morning room check look like? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I check the dashboard first for offline rooms, then walk the critical rooms: power, displays, cables, cameras — and a test call before the first meeting."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "The principle is simple: the users should never discover the fault — I discover it first. At APSI I worked that way on equipment, and I would apply the same discipline to the rooms."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Remote monitoring first (portal health, offline alerts), then the physical walk-through, then a test call. Catch both invisible and visible faults before the first meeting.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>dashboard, walk-through, power, displays, test call.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q2.2: How do you prepare a room for different types of event? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I configure the room according to the event type and the number of attendees: microphone count and placement, display inputs, and a full test call before people arrive."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "For example at APSI, I prepared a board meeting for around 130 people — I managed the microphones, replaced low batteries and adjusted the audio levels so the meeting ran smoothly."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> This is your REAL AV experience: room configuration per event type and attendee count, microphones, batteries, audio levels, displays, test calls. Do not invent specific incident outcomes — state what you did, not invented stories.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>event type, attendee count, microphone placement, test call, 130 people.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q2.3: How do you manage microphones and batteries? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I check microphone levels and battery state before every event, and I keep spare batteries ready. During a meeting I replace a weak battery quickly and quietly."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "At the APSI board meeting, that is exactly what I did — I managed the microphones and replaced low batteries so the meeting ran smoothly."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Preventive check (level, mute state, battery), spares ready, discreet live swap. This is confirmed personal experience — quote it as is.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>batteries, spares, levels, discreet swap.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q2.4: What do you check on displays, cameras and connectivity? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Power, input selection, cable seating, and a real test call with camera and microphone. A room is only 'ready' when the test passes."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I also check that the right devices are selected in the room system — the camera and microphone the platform actually uses."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>power, input, cables, test call, device selection.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q2.5: How do you handle laptops with different operating systems? <span class="badge useful">Useful</span></p>
-            <p class="ans">"I test compatibility in advance: different laptops and operating systems, the sharing cable or wireless path, and the permissions of the sharing app."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "A room that works with my test machine is not proven — I test with the presenters' machines when I can, before the meeting."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Compatibility checks across laptops/OS are part of your real meeting-preparation experience. Known traps: dongles without video support, OS privacy permissions blocking the camera, wrong default devices.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>compatibility, dongles, permissions, presenters' machines.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q2.6: Several rooms need attention at once — how do you prioritise? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Triage: a live client meeting comes first, then a room about to host one, then everything else. A room with a workaround can wait in degraded mode."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If both are critical and I'm alone, I ask for backup immediately — that's procedure, not failure."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>triage, live meeting first, workaround, backup.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q2.7: What preventive maintenance have you actually done? <span class="badge essential">Essential</span></p>
-            <p class="ans">"At APSI I ran scheduled checks on machines and infrastructure — verifying things work before users depend on them — and I applied the same discipline to meeting preparation."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "The board meeting for 130 people is the clearest example: microphones, batteries, audio levels, all checked before the meeting started."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>scheduled checks, before users, board meeting.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q2.8: How do you keep track of room equipment? <span class="badge useful">Useful</span></p>
-            <p class="ans">"With an inventory mindset: what is installed in each room, its state, and what I checked. At APSI I built exactly that with GLPI."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I would keep my own reference sheet per room — models, firmware, known-good state — until the team's documentation takes over."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>inventory, reference sheet, known-good state.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q2.9: How would you coordinate daily with the London team? <span class="badge useful">Useful</span></p>
-            <p class="ans">"With a short written daily summary — room checks done, open incidents, anything needing their attention — sent before London gets busy."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I ask questions early rather than struggling alone, and I learn the rooms from German on the ground."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>daily summary, written updates, ask early.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         03 — AV SYSTEMS
-    ======================================== -->
-    <button class="accordion" id="g03">03 🖥️ AV systems (Zoom · Teams · Crestron · Q-SYS)</button>
-    <div class="panel">
-        <div class="group-intro">Conceptual knowledge only for Crestron/Q-SYS/Intune-class products — never claim production administration. Say the architecture plus your checking order.</div>
-
-        <div class="qa">
-            <p class="q">Q3.1: What is a Zoom Room? <span class="badge essential">Essential</span></p>
-            <p class="ans">"A Zoom Room is a licensed room system: a room computer runs the Zoom Rooms software, a tablet controls it, and a dedicated room account registers it with Zoom's cloud."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "The admin portal is valuable for support: it shows room health, versions and offline alerts — so I can check a room before walking there."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Components: room computer or appliance + display + AV peripherals + controller tablet + licensed room account. Admin Portal = fleet monitoring.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>room computer, controller tablet, room account, Admin Portal.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.2: What is a Microsoft Teams Room, and what is a resource account? <span class="badge essential">Essential</span></p>
-            <p class="ans">"A Teams Room is the same idea: a compute unit runs the platform with a touch console. The room signs in with a resource account — a mailbox that receives invitations and shows the calendar."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If meetings don't appear on the console, I check whether the room was actually invited, whether the account is signed in, then the network — in that order."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Resource account = room identity (Exchange mailbox, auto-accept rules). Misconfiguration symptoms: missing meetings, declined invitations, booking conflicts — escalate to the account admin.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>compute unit, touch console, resource account, calendar.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.3: What is one-touch join, and what is BYOD mode? <span class="badge essential">Essential</span></p>
-            <p class="ans">"One-touch join means the console shows the scheduled meeting with a Join button — no dialling. BYOD means the user's laptop runs the meeting and borrows the room's camera, microphone and speakers over USB."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "One-touch depends on the invitation, calendar sync and the meeting details. BYOD faults are mostly USB detection or wrong device selection on the laptop."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>one-touch join, calendar, BYOD, USB peripherals.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.4: What is Crestron? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Crestron controls the room: a processor runs the logic, touch panels drive it, and the room configures itself when the user taps a button."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If a room misbehaves, I check power, network, then the processor, then routing — and I keep the meeting running while I diagnose. I understand the architecture; I haven't administered it in production."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Ecosystem: control processor, touch panels, switchers. The panel and the processor are the first diagnostic targets. Conceptual knowledge only — never claim hands-on administration.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>processor, touch panel, room logic, power → network → processor → routing.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.5: What does a Crestron control processor do? <span class="badge essential">Essential</span></p>
-            <p class="ans">"The processor is the brain of the room. It runs the control program and talks to every device — panels, displays, shades, lights."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If the processor is down, the touch panels usually go unresponsive because they've lost their controller — so the first question in a dead room is: is the processor powered and reachable?"</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>brain, control program, dead room, PoE, IP.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.6: What is Crestron DigitalMedia, and what is XiO Cloud? <span class="badge useful">Useful</span></p>
-            <p class="ans">"DigitalMedia is Crestron's AV distribution family — it routes video sources to displays and manages long-distance signals. XiO Cloud is their cloud platform for monitoring and updating devices centrally."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "For support, XiO Cloud means I could see room health without visiting — the same idea as any fleet-management tool. I haven't administered it; the concepts are clear to me."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>DM routing, EDID, extension, XiO Cloud, fleet monitoring.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.7: What is Q-SYS? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Q-SYS is the audio brain of the room. A Core runs the processing, microphones and amplifiers connect over the network, and the signal path is designed in Q-SYS Designer."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "For any audio fault, I follow the chain — microphone, Core, routing, output — and the meters tell me where the signal stops."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>Core, DSP, networked audio, Designer, meters.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.8: What is acoustic echo cancellation (AEC)? <span class="badge essential">Essential</span></p>
-            <p class="ans">"AEC removes the far-end sound from what the room microphones send back, so remote participants don't hear themselves."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If the far end reports echo, I first look for a laptop in the room that joined with its own microphone and speakers open — that's the classic cause."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> AEC uses the far-end signal as reference. Wrong reference or a microphone outside the processed path = echo complaint from the far end.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>AEC, far-end reference, echo, rogue laptop mic.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.9: Which room equipment families do you know (Logitech, Poly, Neat)? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Video bars — camera, microphones and speakers in one unit, for small and medium rooms. PTZ cameras with separate audio for large rooms. USB speakerphones for BYOD."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Most faults on these are physical: connection, selection, or firmware. I would learn the exact installed models in my first weeks — I don't assume what Evercore uses."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>video bar, PTZ, speakerphone, touch controller, appliance.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.10: How do you approach firmware and software updates on room systems? <span class="badge useful">Useful</span></p>
-            <p class="ans">"Carefully: updates fix bugs but can break a working room. I would update outside critical hours, pilot one room first, and verify with a test call afterwards."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "And never improvise an update outside the approved process and schedule."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>off-hours, pilot room, post-update test, procedure.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q3.11: What is AV over IP, and what is PoE? <span class="badge advanced">Advanced</span></p>
-            <p class="ans">"AV over IP means the room's audio and video travel on the standard network instead of dedicated cables. PoE means a device gets its power on the same cable as its data."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "For diagnosis that matters: a dead PoE device points to the switch port or the cable first — before replacing the device."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>AVoIP, PoE, switch port, cable.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         04 — AV TROUBLESHOOTING
-    ======================================== -->
-    <button class="accordion" id="g04">04 🚨 AV troubleshooting scenarios</button>
-    <div class="panel">
-        <div class="group-intro">Answer naturally in 15–30 seconds: short answer first, then the steps only if they ask. The meeting always continues, one way or another.</div>
-
-        <div class="qa">
-            <p class="q">Q4.1: A room cannot join a call five minutes before a client meeting. <span class="badge essential">Essential</span></p>
-            <p class="ans">"Meeting first, diagnosis later. I immediately give users a path — join from a laptop and use the room as peripherals — then I check the room system in parallel."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: is the room system powered and online? Is the meeting on the calendar?</li>
-                                <li>Test: does a test meeting join? Reboot the room system if no meeting is running.</li>
-                                <li>Workaround: laptop-based meeting with the room's camera, microphone and speakers.</li>
-                                <li>Inform: one sentence to the users — "Start on the laptop, I'll fix the room afterwards."</li>
-                                <li>Log: root cause, what I ruled out, escalation if beyond my scope.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>meeting first, laptop fallback, sixty seconds of checks.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.2: The microphone is not working. <span class="badge essential">Essential</span></p>
-            <p class="ans">"I check mute states and the platform's microphone meter. If the meter moves, the room side is fine — the problem is routing. If not, it's the microphone, its cable or its selection."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: mute on the device and on the platform; cable seated; battery if wireless.</li>
-                                <li>Test: does the meter move when someone speaks into it?</li>
-                                <li>Workaround: a secondary microphone or a conference phone — the meeting continues.</li>
-                                <li>Inform: tell users which microphone to use meanwhile.</li>
-                                <li>Log: fix or replace the microphone stage, retest with a real call; DSP design issues go to the specialists.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>mute, meter, cable, secondary microphone.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.3: Remote participants hear an echo. <span class="badge essential">Essential</span></p>
-            <p class="ans">"Echo means a microphone in the room sends the far-end audio back. The classic cause is a laptop that joined the meeting with its own microphone and speakers open — I look for that first."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: laptops in the room joined with audio open; ad-hoc devices on the table.</li>
-                                <li>Test: mute candidates one by one until the echo stops — that identifies the offender.</li>
-                                <li>Workaround: keep the offending device muted; the meeting proceeds.</li>
-                                <li>Inform: brief user guidance — in-room laptops mute their audio.</li>
-                                <li>Log: if the echo recurs, check the AEC reference and escalate the pattern.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>echo, laptop join, mute one by one, AEC.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.4: The camera is not working. <span class="badge essential">Essential</span></p>
-            <p class="ans">"I check the camera connection and the room settings. I test the camera, keep people informed, and use approved backup equipment if needed."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: power and connections — USB or network, PoE for networked cameras.</li>
-                                <li>Test: does the device appear in Device Manager, and is it selected in the platform settings?</li>
-                                <li>Workaround: another camera — even a laptop camera; audio-only as a last resort.</li>
-                                <li>Inform: tell users the meeting can continue meanwhile.</li>
-                                <li>Log: device, port, actions; hardware faults go through the team's replacement process.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>connection, Device Manager, selection, backup camera.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.5: The display is black. <span class="badge essential">Essential</span></p>
-            <p class="ans">"First I ask: is the whole room down, or just the display? Then I check display power, input selection, then the signal path."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: does room audio and control respond? Display power LED, input selection.</li>
-                                <li>Test: reseat or swap the cable; test the source directly into the display.</li>
-                                <li>Workaround: connect the source straight to the display so the meeting proceeds.</li>
-                                <li>Inform: users know the meeting continues while I work.</li>
-                                <li>Log: dead display = power; wrong input = selection; live display without signal = the path; routing/control layer goes to the specialists.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>whole room vs display, power, input, signal.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.6: Screen sharing fails. <span class="badge essential">Essential</span></p>
-            <p class="ans">"First, the direction: does the room display show the content? If yes, the fault is the room-to-far-end path; if no, it's between the presenter and the room."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: cable or wireless path, dock, sharing app permissions, network quality.</li>
-                                <li>Test: reproduce with a second laptop and a known-good cable.</li>
-                                <li>Workaround: send the document by chat or email and co-annotate.</li>
-                                <li>Inform: one sentence — "I'm sending the deck in the chat meanwhile."</li>
-                                <li>Log: the failing stage; recurring cases documented as a pattern.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>direction, second laptop, permissions, document by chat.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.7: The room controller is offline. <span class="badge useful">Useful</span></p>
-            <p class="ans">"A dead controller doesn't mean a dead room. I check its PoE port and network, and meanwhile I control the room directly — display, codec, laptop."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: PoE status on the switch port; is the controller on the network; pairing intact?</li>
-                                <li>Test: is the room computer itself healthy?</li>
-                                <li>Workaround: power and input on the display directly; join from the codec or a laptop.</li>
-                                <li>Inform: users know the meeting doesn't wait for the console.</li>
-                                <li>Log: restore or replace the controller, re-pair per procedure; faulty hardware via the team's process.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>controller vs room, PoE, pairing, direct control.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.8: The video drops intermittently. <span class="badge useful">Useful</span></p>
-            <p class="ans">"Intermittent means physical until proven otherwise — a cable, a connector, a switch port. I note exact timestamps and check the port counters."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: the pattern — time of day, correlation with movement or other events.</li>
-                                <li>Test: replace the suspect cable, reseat connectors, move to another port.</li>
-                                <li>Workaround: keep a fallback procedure ready for that room.</li>
-                                <li>Inform: users know what to do if it drops again.</li>
-                                <li>Log: timestamps and port details — intermittent faults are solved by correlation, not luck.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>intermittent, timestamps, port counters, correlation.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.9: The control system is unavailable — how do you restore the meeting? <span class="badge useful">Useful</span></p>
-            <p class="ans">"My priority is the meeting, not the control system. I power the display manually, select the right input, and let the codec join — or join from a laptop."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Then I reset or escalate the control system once the meeting is running, and I document the manual procedure so the next technician knows the fallback."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>manual power-on, direct input, codec join, documented fallback.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.10: A senior executive cannot connect. <span class="badge essential">Essential</span></p>
-            <p class="ans">"Calm, fast, and I take ownership. I define the problem concretely — Wi-Fi, VPN or the meeting — and give them options while I check."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>CHECK → TEST → WORKAROUND → INFORM → LOG:</strong>
-                            <ol>
-                                <li>Check: what "cannot connect" means concretely; account state, network, the specific service.</li>
-                                <li>Test: two-minute triage on the failed layer.</li>
-                                <li>Workaround: phone hotspot, guest network, another room or device — their business first.</li>
-                                <li>Inform: one sentence about what I'm doing; no blame, no over-explaining.</li>
-                                <li>Log: like any incident, with extra attention to recurrence.</li>
-                            </ol>
-                        </div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>ownership, two-minute triage, options first, discretion.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q4.11: Two critical incidents happen simultaneously. <span class="badge essential">Essential</span></p>
-            <p class="ans">"Triage. The room with a live client meeting comes first; a room with a workaround can run degraded while I handle the other."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I give one sentence to each group — what I'm doing and what they should do meanwhile. If both are critical and I'm alone, I ask for backup immediately: that's procedure, not failure."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>triage, degraded mode, one sentence per group, ask for backup.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         05 — WINDOWS & DESKTOP
-    ======================================== -->
-    <button class="accordion" id="g05">05 🪟 Windows &amp; desktop</button>
-    <div class="panel">
-        <div class="group-intro">Your strongest technical area — answer with confidence. Adeal will listen here.</div>
-
-        <div class="qa">
-            <p class="q">Q5.1: What is a driver? <span class="badge essential">Essential</span></p>
-            <p class="ans">"A driver allows Windows to communicate with hardware."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If a device misbehaves after an update, rolling back the driver is often the fastest fix — I check Device Manager first."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Device Manager: error icons = driver problems; update, roll back, disable/enable. Driver updates follow the team's process, not improvisation.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>driver, Device Manager, roll back.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.2: A user has no sound on Windows. What do you check? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I check the output device first — Windows often outputs to the wrong device — then volume levels, then the driver in Device Manager."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If it's a dock or USB headset, I reseat the connection and test on another port. The default device is the usual culprit."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>output device, default device, volume, driver.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.3: A docking station shows no displays. What do you check? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I check the dock's power supply, the display inputs, and the graphics driver — and I test the dock with a second laptop to separate the dock from the machine."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Display arrangement in Windows settings and the adapter chain matter too — docks and dongles cause most multi-display faults."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>dock power, inputs, graphics driver, second laptop.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.4: How do you use Event Viewer? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Event Viewer tells me what actually happened. I filter by severity and time around the incident, and the event IDs make my escalation precise."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "The classic pattern: an error at the exact time of the user's complaint, with a source and ID that match a known issue."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>filter, severity, time correlation, event IDs.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.5: A user cannot sign in. What do you check? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I try a second account on the same machine. If it works, the machine is fine — it's the account: locked, disabled or an expired password."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If nobody can sign in, it's machine-level: the network, a broken trust relationship, or the system itself. That one test halves the problem."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>second account, account state, trust relationship.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.6: A user profile is corrupted. <span class="badge useful">Useful</span></p>
-            <p class="ans">"Typical signs: a temporary profile, settings not saving. I inspect the profile with an admin account, then create a new profile and migrate the user's data."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I check whether the problem follows the user or the machine — that tells me if it's the profile or the system."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>temporary profile, admin inspection, new profile, migration.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.7: An application will not start. What is your method? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Scope first — one user or several? Then reproduce, check what changed, read the app's logs and the Event Log, and test with another user profile."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "That separates user-level from system-level. If the app needs the network, I verify connectivity and permissions."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>scope, reproduce, what changed, logs, other profile.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.8: A Windows update caused a problem. What do you do? <span class="badge useful">Useful</span></p>
-            <p class="ans">"The correlation is my starting point: it broke right after patching. I roll back the update if that's within my permitted actions — otherwise I restore the user's function another way."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Then I follow the team's process: report the regression with the update ID, the symptom and the scope. The owners decide between removal, deferral or a fixed patch."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>correlation, roll back, regression report, update ID.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.9: A printer is not printing. What do you check? <span class="badge useful">Useful</span></p>
-            <p class="ans">"I split the chain: the printer itself, the print queue, the driver, then the client side. A stuck queue and the spooler solve many cases."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "For recurring problems, the driver or the server needs attention — and I document the pattern."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>printer panel, queue, spooler, driver, client.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.10: What Microsoft 365 issues do you expect to support? <span class="badge essential">Essential</span></p>
-            <p class="ans">"The classics: Outlook sign-in and sync, Teams client and meeting issues — which connects directly to this role — OneDrive and SharePoint permissions, and licence problems."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "When features disappear, the licence is often the cause. I always check the user's actual state in the admin tools rather than guessing."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>Outlook, Teams, OneDrive, SharePoint, licences.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.11: A user cannot open a SharePoint file. <span class="badge useful">Useful</span></p>
-            <p class="ans">"I check group membership first, then whether the sharing link is still valid — expiry is common — and whether it's one file or the whole site."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Most cases are membership or link problems, not SharePoint itself failing."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>membership, sharing link, scope.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.12: What is BitLocker, and how do you support it? <span class="badge useful">Useful</span></p>
-            <p class="ans">"BitLocker is Windows' full-disk encryption. If a user hits recovery mode, I retrieve the recovery key through the official admin process — never a local copy."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Keys live in Active Directory or Entra ID. In a bank, that key discipline is not optional."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>encryption, recovery key, AD/Entra, procedure.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q5.13: What do you know about Intune, Autopilot and SCCM? <span class="badge advanced">Advanced</span></p>
-            <p class="ans">"Intune is Microsoft's cloud endpoint management — policies, compliance, app deployment. Autopilot provisions new machines automatically at first sign-in. SCCM is the classic on-premises platform."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "To be transparent: I understand the concepts and I've worked with deployment and update workflows for years, but I haven't administered Intune or Autopilot in production. Learning them is high on my list."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Conceptual knowledge only — never claim production administration of these products.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>Intune, Autopilot, SCCM, concepts not production.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         06 — NETWORKING
-    ======================================== -->
-    <button class="accordion" id="g06">06 🌐 Networking</button>
-    <div class="panel">
-        <div class="group-intro">One-liner definitions first; the commands sequence is your method answer.</div>
-
-        <div class="qa">
-            <p class="q">Q6.1: What is an IP address? <span class="badge essential">Essential</span></p>
-            <p class="ans">"An IP address identifies a device on a network."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If a machine has an APIPA address — an automatic fallback range — it means it couldn't reach DHCP. That's a common first clue."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>IP address, APIPA, DHCP clue.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.2: What does DHCP do? <span class="badge essential">Essential</span></p>
-            <p class="ans">"DHCP automatically assigns IP addresses and network settings."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "It does not resolve names — that's DNS. DHCP allocates addresses; if it fails, the device falls back to APIPA."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>DHCP, automatic assignment, APIPA.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.3: What does DNS do? <span class="badge essential">Essential</span></p>
-            <p class="ans">"DNS translates domain names into IP addresses."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If a website works by IP address but not by name, I check DNS with nslookup."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> DNS provides name resolution. It does not allocate IP addresses; DHCP usually handles automatic IP configuration.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>DNS / name resolution / nslookup.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.4: What is a gateway? <span class="badge essential">Essential</span></p>
-            <p class="ans">"A gateway connects the local network to other networks."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If a device can ping its own subnet but nothing beyond, the gateway path is the suspect — like a room reaching local devices but not cloud meetings."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>gateway, subnet exit, local vs beyond.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.5: What is a VLAN? <span class="badge essential">Essential</span></p>
-            <p class="ans">"A VLAN divides a network into separate logical networks."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "In AV rooms that matters: a device with a valid address that still can't reach its controller is often on the wrong port or VLAN. I recognise the symptom and describe it precisely to the network team."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>VLAN, segmentation, wrong port, escalate.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.6: What is a VPN? <span class="badge essential">Essential</span></p>
-            <p class="ans">"A VPN creates a secure connection to a remote network."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Typical faults: authentication — certificates or MFA — DNS inside the tunnel, or partial split-tunnel. Same diagnosis as any connectivity case, one layer deeper."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>VPN, authentication, DNS in tunnel, split-tunnel.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.7: What is a firewall? <span class="badge essential">Essential</span></p>
-            <p class="ans">"A firewall controls network traffic using security rules."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "If routing and DNS are fine but one port is blocked, that's a firewall. In a bank, I never bypass — I make a documented request to the security team."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>firewall, rules, blocked port, never bypass.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.8: What is a WAN, and what is a SAN? <span class="badge useful">Useful</span></p>
-            <p class="ans">"A WAN connects networks across different locations. A SAN provides shared storage over a dedicated network."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "When an incident behaves differently between Paris and London, I'm seeing WAN-level effects — and the escalation belongs higher than the room."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>WAN, SAN, Paris–London, escalation.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.9: A laptop cannot access the network. What do you do? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I start with <code>ipconfig /all</code> — address, gateway, DNS — then ping the gateway, resolve a name with nslookup, and test the service port with Test-NetConnection."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Each step isolates one layer. I escalate with the failing layer and evidence, not guesses. Do other devices work on the same port? That tells me cable, DHCP or VLAN."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>ipconfig /all, ping, nslookup, Test-NetConnection, one layer at a time.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.10: DNS resolution fails. What do you do? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Nothing opens by name but IP still works. The decisive test: nslookup against the internal server, then a public one."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Only public resolves — internal DNS. Several machines affected — it's infrastructure, straight to the network team. Any temporary client setting is documented and reverted."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>nslookup internal vs public, infrastructure, revert temp fixes.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.11: How do you troubleshoot Wi-Fi problems? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Scope first: one device or many? Many — it's the access point or the network. One — it's the device: signal, band, authentication."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I compare with a working device in the same location. And my rule for meeting rooms: critical AV is wired — Wi-Fi is for laptops and guests."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>scope, signal, authentication, wired for critical AV.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q6.12: Which diagnostic commands do you use, and why? <span class="badge useful">Useful</span></p>
-            <p class="ans">"ipconfig /all for the configuration, ping for reachability, tracert for where the path breaks, nslookup for names, Test-NetConnection for a specific port, gpresult for policies."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Test-NetConnection is the one that decides 'network problem or firewall problem' — it tests a host plus a port. gpresult shows which policies applied and which failed."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>ipconfig, ping, tracert, nslookup, Test-NetConnection, gpresult.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         07 — SECURITY & INFRASTRUCTURE
-    ======================================== -->
-    <button class="accordion" id="g07">07 🔒 Security &amp; infrastructure</button>
-    <div class="panel">
-
-        <div class="qa">
-            <p class="q">Q7.1: What is malware? What is a virus? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Malware is software designed to cause harm. A virus is malware that replicates by infecting files or programs."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Malware is the umbrella term — viruses, worms, ransomware, spyware, trojans. For a technician, the response procedure matters more than the taxonomy."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>malware, virus, umbrella term, response procedure.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q7.2: A user reports a suspicious email or attachment. What do you do? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I tell them not to open or forward it, I collect the facts — sender, subject, what they clicked — and I follow the company's security procedure immediately."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "In a bank, security incidents have their own escalation path. I document the indicators and the timeline, and I never improvise."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>don't open, facts, security procedure, escalation path.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q7.3: A machine appears infected. What do you do? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I isolate the machine from the network at once, I don't try to clean it while it's online, and I follow the company's security procedure — imaging and reporting."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I document everything: indicators, timeline, user actions. Security incidents here have a dedicated escalation path — I follow it strictly."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>isolate first, don't clean online, procedure, document.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q7.4: Why does confidentiality matter so much here? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Because the technician sees sensitive things — screens, documents, conversations — and none of it leaves that context. I don't discuss what I saw, I don't photograph screens."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I keep my work inside the company's systems and follow the clean-desk and room-privacy rules. AV staff enter rooms where sensitive meetings happen — discretion is basic hygiene."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>need-to-know, no copies, traceability, discretion.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q7.5: What is a virtual machine, and when would you use one? <span class="badge useful">Useful</span></p>
-            <p class="ans">"A VM is a computer running inside software. I use one to test updates or reproduce issues safely — a snapshot first, then experiment."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "It's also a diagnostic tool: if a problem doesn't reproduce in a clean VM, the cause is in the machine's state, not the software."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>VM, snapshot, test, isolate variables.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q7.6: Thin client versus thick client? <span class="badge useful">Useful</span></p>
-            <p class="ans">"A thick client does everything locally; a thin client gets its desktop from the server. Thick needs individual care; thin depends on the network."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "For support that changes the diagnosis: thick means hardware and OS work on each machine; thin means server-side and connectivity diagnostics."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>thick, thin, VDI, support implications.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q7.7: What is ITIL, in practical terms? <span class="badge useful">Useful</span></p>
-            <p class="ans">"ITIL is the framework for structured IT service management: incidents versus requests, priority, escalation, problem management for recurring issues."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I'm not ITIL-certified, but I applied those principles for years — and deploying GLPI at APSI was exactly about structuring incidents that way."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>ITIL, incident, priority, problem management, GLPI.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q7.8: Do you use PowerShell? <span class="badge useful">Useful</span></p>
-            <p class="ans">"Yes, for Windows diagnostics and automation — Test-NetConnection for connectivity tests, gpresult for policy checks. My main scripting language is Python, used on real automation projects."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "So I can read, adapt and run PowerShell, and I would gladly go deeper on the team's existing scripts."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>PowerShell diagnostics, Python strong language.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         08 — APSI EXPERIENCE
-    ======================================== -->
-    <button class="accordion" id="g08">08 🏢 APSI experience (22 years, GLPI, AnyDesk)</button>
-    <div class="panel">
-        <div class="warning">
-            <h4>⚠️ Facts policy</h4>
-            <p>APSI was a <strong>healthcare association</strong>. Limited Active Directory exposure. GLPI figures concern <strong>incident resolution time</strong>, not a demonstrated reduction in incident numbers. No invented incident outcomes.</p>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q8.1: Tell us about APSI. <span class="badge essential">Essential</span></p>
-            <p class="ans">"Twenty-two years in IT support for a healthcare association: users, Windows, systems and networks, about three hundred workstations across several sites."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Preventive checks, documentation, calm under pressure. I even supported a board meeting with around 130 people — microphones, batteries, audio levels."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Never "an IT services company". Healthcare association, ~22 years, ~300 workstations, multisite.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>healthcare association, 22 years, 300 workstations, multisite, board meeting.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q8.2: What meeting-room experience do you have at APSI? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I prepared rooms according to the event type and the number of attendees: microphones, batteries, audio levels, displays, test calls, and laptop compatibility checks."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "The clearest example is a board meeting with around 130 people. I managed microphones, replaced low batteries and adjusted audio levels to help the meeting run smoothly."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> This is your verified AV experience. Describe what you did — configuration, checks, live support — without inventing specific incident outcomes.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>room configuration, event type, attendee count, microphones, batteries, test calls.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q8.3: What was the GLPI deployment? <span class="badge essential">Essential</span></p>
-            <p class="ans">"I implemented GLPI for inventory, asset tracking, maintenance records and licence visibility — and I used its reporting to monitor support performance."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "It made the support work measurable — response, resolution, recurrence — instead of anecdotal. In practice we discussed an improvement of roughly thirty percent in <strong>incident resolution time</strong>; I wouldn't quote exact before-and-after figures."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> The ~30% concerns resolution time, as discussed in practice — NOT a demonstrated 30% reduction in incident numbers. Do not invent exact before-and-after figures.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>GLPI, inventory, asset tracking, maintenance records, licences, reporting.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q8.4: How did AnyDesk fit into your work? <span class="badge essential">Essential</span></p>
-            <p class="ans">"AnyDesk supported remote interventions. For a multisite environment, it let me resolve issues without travelling between sites — faster response, fewer unnecessary trips."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Of course, some interventions still need a physical presence — hardware, cabling, room checks. Remote and on-site work complement each other."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>AnyDesk, remote interventions, fewer trips, multisite.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q8.5: What was your Active Directory exposure? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Limited direct exposure, towards the end of my time at APSI. I understand AD's model — users, groups, policies — but I don't claim full administration experience."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "An integration between GLPI and Active Directory was planned — for example automated asset and user data — but it wasn't completed before I left. I never claim remote locking, wiping or deployment policies; I didn't implement those."</div>
-                        <div class="tip tech-note"><strong>TECHNICAL NOTE:</strong> Correction applied: limited AD exposure, planned-but-unfinished GLPI–AD integration, no remote lock/wipe/deployment claims. Conceptual AD knowledge (EV/reference file) is separate from claimed experience.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>limited exposure, concepts yes, integration planned not completed, no overclaiming.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q8.6: What did multisite operations teach you? <span class="badge useful">Useful</span></p>
-            <p class="ans">"Planning, documentation, and autonomy with discipline. With several sites, written records are the only continuity — and those habits transfer directly to covering multiple meeting rooms."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Alone on a site, I decide within the procedures — and I flag anything outside them."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>planning, documentation, autonomy within procedures.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q8.7: Tell us about a difficult incident you handled. <span class="badge useful">Useful</span></p>
-            <p class="ans">"My method is always the same: define the symptom precisely, check what changed, isolate the layer, and test one hypothesis at a time."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="highlight"><strong>PERSONAL EXAMPLE — TO BE COMPLETED:</strong> choose one real APSI incident (symptom, investigation, cause, resolution, duration) and verify it before the interview. Do not fabricate a story.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>method, what changed, isolate, one hypothesis at a time.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q8.8: What did you do after APSI? <span class="badge useful">Useful</span></p>
-            <p class="ans">"I invested in my technical skills: intensive web-development training, then a Java, Spring and Angular programme, plus real automation projects with Python and n8n."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Those projects involved servers, Linux and data processing — all directly useful in a support role. Specific figures only if asked, always distinguishing measured from estimated."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>Le Wagon 2022, Aston 2023, Python, n8n, measured vs estimated.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         09 — BEHAVIOURAL QUESTIONS
-    ======================================== -->
-    <button class="accordion" id="g09">09 🤝 Behavioural questions</button>
-    <div class="panel">
-
-        <div class="qa">
-            <p class="q">Q9.1: How do you work under pressure? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Pressure changes my method, not my behaviour: shorter communication, stricter priorities, more frequent updates."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "The worst response to pressure is haste without structure. I'd rather take thirty seconds to triage properly than create two incidents while fixing one."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>method not behaviour, triage, updates.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q9.2: How do you prioritise when everything is urgent? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Impact times urgency: a live client meeting outranks a single-user issue that has a workaround. I stabilise the business first, then match the ticket priority to the real impact."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Not whoever shouts loudest — the actual business impact."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>impact × urgency, workaround, business impact.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q9.3: How do you work with senior executives? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Same technical discipline, three adaptations: I come with options not questions, I speak in two sentences, and I stay discreet."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "They need to know one thing: the meeting will happen, and I own the problem."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>options, brevity, discretion, ownership.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q9.4: Tell me about a time you disagreed with a colleague. <span class="badge useful">Useful</span></p>
-            <p class="ans">"I keep it factual and private: I state what I observe, I listen to their reasoning, and if it's their call, I support the decision and document my concern once."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="highlight"><strong>PERSONAL EXAMPLE — TO BE COMPLETED:</strong> a real disagreement (situation, the other person's view, what you did, how it ended). No invented stories.</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>factual, private, listen, support the decision.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q9.5: When and how do you escalate? <span class="badge essential">Essential</span></p>
-            <p class="ans">"When the problem exceeds my scope, my access, or the available time — and I escalate early, not late."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "A good escalation contains: the symptom in user terms, what I already ruled out, the business context, and what I need — a decision, an action, or expertise."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>scope/access/time, early, ruled out, precise need.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q9.6: What if a procedure seems wrong to you? <span class="badge useful">Useful</span></p>
-            <p class="ans">"I apply it as written, I flag the gap to the team, and I propose improvements through the normal channel. I never improvise around a procedure."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "In banking, procedures are what make support consistent and auditable — that's a feature, not bureaucracy."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>apply, flag, propose, never improvise.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q9.7: How do you admit a technical limitation? <span class="badge essential">Essential</span></p>
-            <p class="ans">"Directly and early: 'I haven't worked with that in production, but here's what I understand and how I'd proceed.' Then I pair the admission with a path."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "Pretending gets discovered at the worst moment, in front of a user. Honesty plus method is what earns trust."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>direct, early, admission + path.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q9.8: How do you approach learning unfamiliar equipment? <span class="badge useful">Useful</span></p>
-            <p class="ans">"Documentation first, inventory second, hands-on early: test calls after hours, guided interventions, and my own reference sheet per room."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "It's how I've always learned — structured, documented, hands-on as soon as possible."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>documentation, inventory, low-stakes practice, reference sheet.</em></p>
-            </div>
-        </div>
-
-        <div class="qa">
-            <p class="q">Q9.9: A user is frustrated by a recurring issue. What do you say? <span class="badge useful">Useful</span></p>
-            <p class="ans">"I acknowledge it first: 'You're right, this is the third time — let's fix it properly.' Then I treat the recurrence as a pattern, not a one-off."</p>
-            <button class="detail-btn">Details</button>
-            <div class="sub-panel">
-            <div class="if-more"><strong>IF THEY ASK MORE:</strong> "I pull the history, look for the common cause, and if it's beyond my scope I escalate it as a recurring problem — which is a different ticket than a single incident."</div>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>acknowledge, pattern, common cause, recurring-problem ticket.</em></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================
-         10 — INTERVIEW SIMULATION
-    ======================================== -->
-    <button class="accordion" id="g10">10 🎯 Interview simulation (Alex · Adeal · German)</button>
-    <div class="panel">
-        <div class="group-intro">Preparation priorities inferred from the recruiter briefing — not confirmed individual questions.</div>
-
-        <div class="qa">
-            <p class="q">10.1: Alex Dyson — AV Support Lead EMEA/APAC <span class="badge essential">Essential</span></p>
-            <p><strong>Focus expected:</strong> reliability, teamwork, daily room checks, procedures, escalation, motivation, long-term commitment.</p>
-                        <p><strong>Your anchors:</strong> morning-check routine (Q2.1), triage and escalation method (Q9.2, Q9.5), five-year plan (Q1.9), daily written summary (Q2.9). Emphasise stability and ownership.</p>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>reliability, checks, procedures, escalation, commitment.</em></p>
-        </div>
-
-        <div class="qa">
-            <p class="q">10.2: Adeal Hafeez — Desktop Engineer, London <span class="badge essential">Essential</span></p>
-            <p><strong>Focus expected:</strong> Windows, networking, troubleshooting, Microsoft 365, security, desktop support.</p>
-                        <p><strong>Your anchors:</strong> Group 05 and Group 06 answers — driver, sound, sign-in, Event Viewer, connectivity sequence, M365. Show method, not encyclopaedia.</p>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>Windows, network, M365, methodical diagnosis.</em></p>
-        </div>
-
-        <div class="qa">
-            <p class="q">10.3: German Moura — AV Technician <span class="badge essential">Essential</span></p>
-            <p><strong>Focus expected:</strong> practical meeting-room problems, microphones, displays, cameras, conferencing systems, workarounds.</p>
-                        <p><strong>Your anchors:</strong> Group 02 and Group 04 — room preparation, microphones and batteries, camera scenario, echo, black display. Lean on the 130-person board meeting; show you enjoy hands-on work.</p>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>practical, microphones, displays, workarounds, board meeting.</em></p>
-        </div>
-
-        <div class="qa">
-            <p class="q">10.4: Your first and last sixty seconds <span class="badge essential">Essential</span></p>
-            <p><strong>Opening:</strong> the 60-second pitch (Q1.1) — say it calmly, then stop. Let them ask.</p>
-                        <p><strong>Closing:</strong> "Thank you for your time — this conversation made the role even more concrete for me." Plus your two questions (Q1.12). No salary, contract or process questions at the end.</p>
-                        <p class="keywords"><strong>KEYWORDS:</strong> <em>pitch, stop, closing thanks, two questions.</em></p>
-        </div>
-    </div>
-
-    <!-- ========================================
-         11 — QUICK REVISION
-    ======================================== -->
-    <button class="accordion" id="g11">11 ⚡ Quick revision</button>
-    <div class="panel">
-        <div class="group-intro">The last thing to read before the interview. Use the ⚡ Quick revision button to strip every question down to its short answer.</div>
-
-        <div class="qa">
-            <p class="q">11.1: Twelve one-line definitions <span class="badge essential">Essential</span></p>
+            <p class="q">🧭 0. Immediate reference points</p>
+            <p><strong>Sources de travail :</strong> fiche initiale de préparation fournie, versions HTML de réponses en anglais, instructions de la recruteuse rapportées dans ces documents. <strong>La fiche de poste officielle DOCX n'est pas disponible parmi les fichiers utilisés ici.</strong> Les éléments techniques ci-dessous sont des connaissances générales et ne décrivent pas l'installation réelle d'Evercore.</p>
             <ul>
-                            <li><strong>DNS:</strong> "DNS translates domain names into IP addresses."</li>
-                            <li><strong>DHCP:</strong> "DHCP automatically assigns IP addresses and network settings."</li>
-                            <li><strong>Gateway:</strong> "A gateway connects the local network to other networks."</li>
-                            <li><strong>VLAN:</strong> "A VLAN divides a network into separate logical networks."</li>
-                            <li><strong>VPN:</strong> "A VPN creates a secure connection to a remote network."</li>
-                            <li><strong>Firewall:</strong> "A firewall controls network traffic using security rules."</li>
-                            <li><strong>IP address:</strong> "An IP address identifies a device on a network."</li>
-                            <li><strong>WAN:</strong> "A WAN connects networks across different locations."</li>
-                            <li><strong>SAN:</strong> "A SAN provides shared storage over a dedicated network."</li>
-                            <li><strong>Malware:</strong> "Malware is software designed to cause harm."</li>
-                            <li><strong>Virus:</strong> "A virus is malware that replicates by infecting files or programs."</li>
-                            <li><strong>Driver:</strong> "A driver allows Windows to communicate with hardware."</li>
-                        </ul>
+                <li>Alex Dyson — Responsable AV EMEA / Asie-Pacifique ; conduit l'entretien ; manager potentiel</li>
+                <li>Adeal Hafeez — Desktop Engineer, Londres ; volet Windows, identité, réseau, support</li>
+                <li>German Moura — AV Technician ; futur collègue potentiel ; dépannage concret des salles</li>
+                <li>Travail — Présentiel, Paris rue de Courcelles ; rotation annoncée 8 h–19 h ; heures supplémentaires possibles lors d'événements</li>
+                <li>Priorité — AV / salles de réunion d'abord ; Desktop ensuite ; confidentialité, communication, procédures</li>
+                <li>Préparation Teams — Accepter l'invitation, vérifier caméra et son, se connecter à 11 h 25, tenue professionnelle, environnement calme</li>
+            </ul>
         </div>
-
         <div class="qa">
-            <p class="q">11.2: Five reflex sentences under pressure <span class="badge essential">Essential</span></p>
+            <p class="q">Présentation orale — version recommandée (45–60 secondes)</p>
+            <p><strong>Attention :</strong> confirmer avant l'entretien les détails personnels des contrôles AV (compte de test, deux connexions, fréquence, type d'équipements). Ne pas réciter une expérience non vérifiée. Attendre la question <em>“Tell us about yourself”</em> avant de présenter ce pitch.</p>
+            <p class="ans">I've worked in IT support and infrastructure for over twenty years, mainly at APSI, where I supported around 300 workstations across several sites. My work included Windows systems, networking, user support and audiovisual equipment for meetings and events. Since 2022, I've also developed my skills in software development, Linux and automation. But I particularly enjoy hands-on technical support, solving problems and working directly with people. That's why this role interests me: it combines AV support, desktop troubleshooting and teamwork.</p>
+        </div>
+        <div class="qa">
+            <p class="q">Logique générale d'une réponse de dépannage</p>
+            <ol>
+                <li><strong>Assess the impact</strong> — importance de la réunion, symptômes, utilisateurs concernés.</li>
+                <li><strong>Check the basics</strong> — alimentation, câbles, entrée vidéo, mute, périphérique sélectionné.</li>
+                <li><strong>Isolate the fault</strong> — tests locaux / distants, matériel / logiciel / réseau, équipement connu fonctionnel.</li>
+                <li><strong>Restore service</strong> — solution de secours approuvée, sans compromettre la sécurité.</li>
+                <li><strong>Escalate and document</strong> — ticket, tests, impact, interlocuteur informé, cause à rechercher.</li>
+            </ol>
+        </div>
+    </div>
+    <button class="accordion" id="sec00">00 — START: opening &amp; personal introduction</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. How should I greet the panel?</p>
+            <p class="ans">Good morning, Alex. Good morning, everyone. Thank you for inviting me. It is nice to meet you all.</p>
+            <div class="note-line">⚠️ Attendre leur question ; ne pas lancer un monologue spontanément.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. Tell us about yourself.</p>
+            <p class="ans">I have worked in IT support and infrastructure for over twenty years, mainly at APSI, where I supported around 300 workstations across several sites. My work included Windows systems, networking, user support and audiovisual equipment for meetings and events. I also prepared meeting rooms and tested microphones, projectors and video calls before meetings started. Since 2022, I have expanded my skills in software development, Linux and automation. But I particularly enjoy hands-on technical support, solving problems and working directly with people. That is why this position interests me: it combines AV support, desktop troubleshooting and teamwork.</p>
+            <div class="note-line">⚠️ Pitch de 45 à 60 secondes. Ne pas affirmer que 300 personnes étaient toutes utilisatrices de salles AV.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. Why Evercore?</p>
+            <p class="ans">Evercore operates in an environment where confidential meetings and reliable technology are essential. I like the combination of technical responsibility, careful preparation, documented procedures and direct support to people. I would like to contribute to making meetings run smoothly in the Paris office.</p>
+            <div class="note-line">⚠️ Ne pas prétendre connaître leurs procédures internes.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. Why are you returning to IT support after 2022?</p>
+            <p class="ans">I spent time developing my software and automation skills, and that has strengthened my troubleshooting approach. But I have always enjoyed hands-on support, working with people and making sure systems are reliable. This role brings those interests together.</p>
+            <div class="note-line">⚠️ Réponse positive, sans dévaloriser la reconversion.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. You managed IT before. Are you comfortable reporting to Alex?</p>
+            <p class="ans">Yes, absolutely. I have had broad responsibilities in the past, but I am comfortable working within an established team and following its standards. My priority would be to learn the Paris setup, support users and coordinate properly with Alex and the London team.</p>
+            <div class="note-line">⚠️ Éviter le terme « docile » ; insister sur coopération et périmètre.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. Will you leave for a development job?</p>
+            <p class="ans">I am applying because I genuinely enjoy hands-on IT and AV support. My development experience is useful for troubleshooting and documentation, but I am interested in the day-to-day responsibilities of this role.</p>
+            <div class="note-line">⚠️ Ne pas promettre une durée contractuelle précise non confirmée.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. Why AV rather than desktop alone?</p>
+            <p class="ans">AV support has an immediate impact on the business: a meeting needs to work at the scheduled time. I enjoy the combination of preparation, technical diagnosis and working directly with users. I am also comfortable with desktop support, so the mix suits my background.</p>
+            <div class="note-line">⚠️ AV first, desktop solide.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. What if you do not understand a question?</p>
+            <p class="ans">Could you please repeat the question a little more slowly? / Could you clarify what you mean by the room controller? / Let me make sure I understand: are you asking about the network connection or the audio system?</p>
+            <div class="note-line">⚠️ Demander une clarification vaut mieux qu’une réponse hors sujet.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec01">01 — AV: daily checks and meeting-room operations</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. What do you check before the first meeting of the day?</p>
+            <p class="ans">I would follow the room-specific checklist. I would check that the display and room controller are working, verify the scheduled meeting, test camera framing, microphone pickup, speaker output and screen sharing, and make a test call if required. I would check any wireless microphones and batteries, confirm the room is left ready, and report or log any fault.</p>
+            <div class="note-line">⚠️ Proposition de procédure ; les pratiques exactes d’Evercore ne sont pas connues.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. Tell us about your experience preparing rooms at APSI.</p>
+            <p class="ans">At APSI, I supported meeting-room equipment, including projectors, microphones, audio systems and video-conferencing connections. I performed checks before meetings, including audio levels, microphone batteries and connectivity. I understand why identifying a fault before attendees arrive is so important.</p>
+            <div class="note-line">⚠️ Ne pas ajouter de réunion précise sans souvenir vérifié.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. A meeting starts in five minutes and the room will not join. What do you do?</p>
+            <p class="ans">First I would confirm the meeting details and check the controller, display, power, network status and any error message. I would avoid making disruptive changes without approval. If I could not restore the room quickly, I would arrange an approved workaround, such as joining from a laptop, using an alternative room or an audio dial-in if permitted. I would keep the organiser informed, then investigate, document and escalate the root cause after the meeting.</p>
+            <div class="note-line">⚠️ La continuité de la réunion prime, dans le respect de la sécurité.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. A senior banker is angry because the room has failed.</p>
+            <p class="ans">I would remain calm, acknowledge the impact and explain the immediate options briefly. I would focus on restoring the meeting through the safest available workaround, keep the organiser informed and avoid arguing. Afterwards I would record the incident and investigate its cause.</p>
+            <div class="note-line">⚠️ Ne pas promettre une résolution en cinq minutes.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. The room is double-booked.</p>
+            <p class="ans">I would verify the bookings in the approved scheduling system, contact the relevant organisers or assistants, and help identify an available room. I would not change reservations or access permissions without authorisation.</p>
+            <div class="note-line">⚠️ Salles et calendrier de ressources.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. What would you do before a confidential client meeting?</p>
+            <p class="ans">I would complete the technical checks before participants arrive, confirm the correct meeting and sharing setup, and follow the bank’s procedures for room access, recording and confidential material. I would never start recording or change security settings without authorisation.</p>
+            <div class="note-line">⚠️ Confidentialité, enregistrement et accès.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. What is your experience with the LG conference bar at L’Escalator?</p>
+            <p class="ans">I have worked with an LG conferencing bar in the L’Escalator environment. I can explain the equipment and the context, but I would need to describe my exact hands-on tasks rather than claim I administered a dedicated room platform.</p>
+            <div class="note-line">⚠️ À personnaliser avec les opérations réellement effectuées.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. What if the daily checks feel repetitive?</p>
+            <p class="ans">The repetition is the point: preventive checks help avoid disruption during important meetings. I would rather detect a problem in a quiet room than discover it when a client is waiting.</p>
+            <div class="note-line">⚠️ Réponse courte.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec02">02 — AV: equipment, platforms and signal flow</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. What is Zoom Rooms?</p>
+            <p class="ans">Zoom Rooms is a dedicated meeting-room solution using room hardware and a Zoom software setup. Depending on the deployment, it includes a room computer or appliance, a controller, camera, microphones, speakers and displays. Administrators can monitor and manage rooms through Zoom’s management tools. I understand the architecture, but I have not administered it hands-on.</p>
+            <div class="note-line">⚠️ Ne pas confondre application Zoom classique et Zoom Rooms.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. What is Microsoft Teams Rooms?</p>
+            <p class="ans">Microsoft Teams Rooms is a dedicated room system for Teams meetings, usually with a certified console or touch controller, compute or appliance, and audio-video peripherals. It can be managed using Microsoft administration tools. I have used Teams, but I would not claim hands-on Teams Rooms administration without that experience.</p>
+            <div class="note-line">⚠️ Teams ≠ Teams Rooms.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. What is Q-SYS?</p>
+            <p class="ans">Q-SYS is a network-based audiovisual platform for audio processing, routing and room control. Its components can include DSP processing, microphones, amplifiers, speakers and user-control interfaces. I understand its purpose but have not configured Q-SYS systems directly.</p>
+            <div class="note-line">⚠️ DSP = Digital Signal Processing.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. What is Crestron?</p>
+            <p class="ans">Crestron provides room control and audiovisual solutions. A room controller can coordinate displays, input sources, audio levels and other devices through a control interface. I would follow the documented configuration rather than change programming without approval.</p>
+            <div class="note-line">⚠️ Connaissance conceptuelle seulement.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. What do Logitech, Poly and Neat provide?</p>
+            <p class="ans">They provide meeting-room and collaboration hardware such as video bars, cameras, microphones, speakers and room appliances. The exact capabilities depend on the model and whether the room is configured for Zoom Rooms, Teams Rooms or another platform.</p>
+            <div class="note-line">⚠️ Ne pas revendiquer un modèle précis non pratiqué.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. Explain the audio signal flow in a conference room.</p>
+            <p class="ans">A microphone captures sound. The signal may pass through a digital signal processor for gain control, routing and echo cancellation, then into the conferencing system and out to remote participants. Incoming audio follows the return path through the processor or room system to the speakers. Understanding that path helps isolate faults.</p>
+            <div class="note-line">⚠️ Schéma conceptuel : mic → DSP → conférence → distant ; retour → speakers.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. What is a DSP?</p>
+            <p class="ans">A digital signal processor processes audio signals. It can handle mixing, equalisation, gain, routing, noise control and acoustic echo cancellation, depending on the configuration.</p>
+            <div class="note-line">⚠️ Q-SYS utilise notamment ce type de traitement.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. What is AEC?</p>
+            <p class="ans">Acoustic Echo Cancellation reduces the echo created when a microphone picks up sound from the room speakers and sends it back to the far end. I would first check for duplicate audio devices and then inspect the room audio path and AEC configuration through the approved process.</p>
+            <div class="note-line">⚠️ AEC ≠ simple mute ; c’est un traitement audio.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q9. What is EDID?</p>
+            <p class="ans">Extended Display Identification Data is information a display provides to a source about supported resolutions and display capabilities. A failed HDMI or EDID negotiation can contribute to a no-signal problem.</p>
+            <div class="note-line">⚠️ Tester source, câble, port, résolution et adaptateur.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q10. What is HDCP?</p>
+            <p class="ans">High-bandwidth Digital Content Protection is a content-protection system used over digital audiovisual connections. Compatibility or handshake issues can prevent protected content from displaying. I would not try to bypass protection.</p>
+            <div class="note-line">⚠️ Différent d’EDID.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q11. HDMI, DisplayPort, USB-C and USB: what is the difference?</p>
+            <p class="ans">HDMI and DisplayPort carry digital video and audio. USB can connect cameras, microphones and other peripherals. USB-C is a connector that may carry USB data, power and, on compatible devices, video through alternate modes. The connector alone does not guarantee every capability.</p>
+            <div class="note-line">⚠️ Attention aux adaptateurs et docks.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q12. What is AV over IP?</p>
+            <p class="ans">AV over IP transports audiovisual signals or control information over an IP network. Depending on the system, troubleshooting may involve addressing, switch ports, VLANs, multicast traffic, latency and quality of service. I would check the vendor design and the network team’s procedures.</p>
+            <div class="note-line">⚠️ Ne pas présumer que toutes les salles Evercore utilisent multicast.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q13. What is PoE?</p>
+            <p class="ans">Power over Ethernet supplies electrical power and network connectivity over Ethernet cabling to compatible devices. If a network-connected controller or camera is offline, I would check the switch port and power budget as well as the device.</p>
+            <div class="note-line">⚠️ PoE dépend du matériel.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q14. Why might AV devices use a separate VLAN?</p>
+            <p class="ans">A dedicated VLAN can help segment AV devices and apply appropriate access-control and traffic policies. Quality of service can also be configured where required. Segmentation alone does not guarantee performance or security.</p>
+            <div class="note-line">⚠️ Nuance importante : VLAN ≠ QoS automatique.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q15. What is a room resource mailbox?</p>
+            <p class="ans">It is a mailbox or calendar resource used to schedule a meeting room. In a Microsoft environment it can be managed through Exchange and integrated with room scheduling systems. Booking problems may involve permissions, calendar processing or synchronisation.</p>
+            <div class="note-line">⚠️ Ne pas prétendre connaître la configuration Evercore.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Compléments techniques AV — définitions à comprendre</p>
             <ul>
-                            <li>"Could you repeat that, please?"</li>
-                            <li>"Let me think for a second."</li>
-                            <li>"To be transparent, I haven't administered that in production — but here's how I'd approach it."</li>
-                            <li>"As a workaround, I would run the meeting from a laptop."</li>
-                            <li>"So in short: the meeting first, then the root cause."</li>
-                        </ul>
+                <li><strong>Signal flow</strong> — Trajet du signal : microphone → traitement / DSP → système de conférence → distant ; retour vers haut-parleurs. Repérer l'étape où le signal disparaît.</li>
+                <li><strong>AEC</strong> — <em>Acoustic Echo Cancellation</em> : limite le retour de la voix distante captée par les micros locaux ; ne se confond pas avec la suppression du larsen.</li>
+                <li><strong>Gain / volume</strong> — Le gain règle le niveau d'entrée, le volume le niveau d'écoute ; un gain trop élevé peut saturer (<em>clipping</em>).</li>
+                <li><strong>EDID</strong> — Informations communiquées par un écran à la source (résolutions, fréquences, audio) ; un problème de négociation peut provoquer un écran noir.</li>
+                <li><strong>HDCP</strong> — Protection de certains contenus numériques ; incompatibilités possibles dans une chaîne HDMI.</li>
+                <li><strong>USB-C</strong> — Connecteur multifonction ; la vidéo dépend du matériel et des modes pris en charge, elle n'est pas garantie sur tous les ports.</li>
+                <li><strong>PoE</strong> — Alimentation électrique par Ethernet pour certains périphériques compatibles ; vérifier alimentation et budget du commutateur.</li>
+                <li><strong>AV over IP</strong> — Transport/commande de flux AV via réseau ; selon le produit, vérifier IP, VLAN, multicast, QoS, latence et pertes.</li>
+                <li><strong>BYOD</strong> — <em>Bring Your Own Device</em> : utiliser son ordinateur pour rejoindre une réunion avec les périphériques de la salle, lorsque la configuration l'autorise.</li>
+                <li><strong>Room resource account</strong> — Compte ou ressource calendrier associé à une salle ; vérifier invitations, synchronisation et droits selon la plateforme.</li>
+            </ul>
         </div>
-
+    </div>
+    <button class="accordion" id="sec10">10 — CRESTRON: questions techniques et dépannage</button>
+    <div class="panel">
         <div class="qa">
-            <p class="q">11.3: Numbers and facts to remember <span class="badge essential">Essential</span></p>
+            <p class="q">Q1. What is the difference between a Crestron touch panel and a control processor?</p>
+            <p class="ans">The touch panel is the user interface. The control processor runs the programmed logic and sends commands to the connected devices. If the panel is unresponsive, I would check its power and network connection before assuming the processor has failed.</p>
+            <div class="note-line">⚠️ Le panneau n’est pas le processeur.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. A Crestron touch panel is black. What do you check first?</p>
+            <p class="ans">I would check whether it has power, including PoE where applicable, then inspect the network connection and the room’s documented status indicators. I would check whether other room controls still work, so I can narrow down whether the issue is with the panel, network or control system.</p>
+            <div class="note-line">⚠️ Ne pas redémarrer toute la salle sans autorisation.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. The Crestron panel works but the display does not turn on. What would you do?</p>
+            <p class="ans">I would check the display’s power and status, confirm the correct input source, and test whether the panel can control another device. Then I would follow the approved troubleshooting procedure for the display and control path. I would use a documented workaround if the meeting was about to start.</p>
+            <div class="note-line">⚠️ Séparer panne écran, source et contrôle.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. What is the difference between a control problem and a signal problem?</p>
+            <p class="ans">A control problem means a command is not reaching or operating a device correctly. A signal problem means the audio or video content is not reaching its destination. I would test the control action and the signal path separately.</p>
+            <div class="note-line">⚠️ Commande ≠ signal AV.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. What is a Crestron DM system?</p>
+            <p class="ans">Crestron DigitalMedia is a family of solutions used to distribute and switch audiovisual signals across compatible devices and infrastructure. The exact transport and capabilities depend on the installed model, so I would first consult the room diagram.</p>
+            <div class="note-line">⚠️ Ne pas prétendre connaître l’installation Evercore.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. What would you check if laptop content does not appear through a Crestron-controlled room?</p>
+            <p class="ans">I would check the laptop output, cable or adapter, selected source, switcher route and display input. I would try a known-good cable or source if permitted. If the issue continued, I would check the documented signal chain and escalate with my test results.</p>
+            <div class="note-line">⚠️ Vérifier USB-C/HDMI et EDID/HDCP seulement si pertinent.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. What is Crestron XiO Cloud used for?</p>
+            <p class="ans">XiO Cloud is a cloud-based service for monitoring and managing supported Crestron devices. I understand its purpose, but I have not used it as an administrator.</p>
+            <div class="note-line">⚠️ Service selon licences et modèles.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. Would you change Crestron programming to fix a meeting room?</p>
+            <p class="ans">Not without authorisation. I would start with approved checks, documented recovery steps and a workaround. If the problem appeared to involve the control program, I would collect evidence and escalate it to the responsible engineer or integrator.</p>
+            <div class="note-line">⚠️ Réponse particulièrement adaptée à un environnement bancaire.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q9. How do you identify whether a Crestron device has a network issue?</p>
+            <p class="ans">I would check link status, power, IP configuration and connectivity using approved tools. I would compare the device with the room documentation and check whether the issue affects one device or the whole room. I would not change VLANs or firewall rules without approval.</p>
+            <div class="note-line">⚠️ Diagnostic réseau sans modifications risquées.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q10. You have five minutes before a client meeting and the Crestron system fails. What is your priority?</p>
+            <p class="ans">My priority is to keep the meeting running. I would perform a few quick, safe checks, then switch to an approved backup such as a laptop connected directly to a display, if the room setup allows it. I would keep the organiser informed and investigate the fault afterwards.</p>
+            <div class="note-line">⚠️ Ne pas promettre qu’un bypass est toujours possible.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec11">11 — Q-SYS: audio, DSP et diagnostic</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. What is a DSP in a meeting room?</p>
+            <p class="ans">A digital signal processor handles audio functions such as mixing, routing, equalisation and echo cancellation. In a Q-SYS environment, the specific signal path depends on the deployed design.</p>
+            <div class="note-line">⚠️ DSP = traitement numérique du signal.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. What is acoustic echo cancellation, or AEC?</p>
+            <p class="ans">AEC reduces the echo caused when a room microphone picks up sound from the room speakers and sends it back to remote participants. I would first check for duplicate audio devices or open laptop microphones before investigating the DSP configuration.</p>
+            <div class="note-line">⚠️ Distinguer écho acoustique et larsen.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. Remote participants cannot hear the room. How would you troubleshoot?</p>
+            <p class="ans">I would confirm that the correct microphone is selected and not muted, check local input levels and the documented audio path, and test whether the issue affects all microphones. I would then check the conferencing application and, where authorised, the DSP status.</p>
+            <div class="note-line">⚠️ Une panne audio peut aussi être liée au réseau.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. The room hears remote participants but they cannot hear the room. Is the network definitely working?</p>
+            <p class="ans">No. One-way audio can come from microphone selection, muting, DSP routing, application settings or network and media-path issues. I would test the local capture path first, then investigate the wider system if needed.</p>
+            <div class="note-line">⚠️ Éviter le diagnostic catégorique.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. What is the difference between audio gain and volume?</p>
+            <p class="ans">Gain adjusts the level of a signal at a processing stage, while volume usually refers to the listening level at the output. Excessive gain can cause distortion or feedback. I would not change DSP gain settings without understanding the room design.</p>
+            <div class="note-line">⚠️ Réponse conceptuelle, pas une procédure de réglage.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. What would you check if the room speakers are silent?</p>
+            <p class="ans">I would check the selected output device, mute status and volume, then trace the signal through the conferencing system, DSP and amplifier or powered speakers as documented. I would test with a known-good source where permitted.</p>
+            <div class="note-line">⚠️ Tracer la chaîne du signal.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. What is Q-SYS Designer?</p>
+            <p class="ans">Q-SYS Designer is the software used to create and configure Q-SYS system designs. I have not used it hands-on, so I would rely on the deployed documentation and escalate design-level changes.</p>
+            <div class="note-line">⚠️ Ne pas affirmer avoir programmé Q-SYS.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. How would you handle a Q-SYS Core or audio processor showing offline?</p>
+            <p class="ans">I would check the documented power and network status, determine whether the issue affects the entire room or only part of the audio chain, and follow the approved recovery procedure. I would avoid an unapproved reboot during an active meeting.</p>
+            <div class="note-line">⚠️ La plateforme exacte n’est pas confirmée.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec12">12 — ZOOM ROOMS / TEAMS ROOMS / VIDEO BARS</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. What is the difference between Zoom desktop and Zoom Rooms?</p>
+            <p class="ans">Zoom desktop is a meeting application for an individual device. Zoom Rooms is a managed meeting-room solution with dedicated room hardware, controllers and peripherals.</p>
+            <div class="note-line">⚠️ Ne pas assimiler expérience Zoom à administration Zoom Rooms.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. Where would you check Zoom Rooms health?</p>
+            <p class="ans">Depending on my permissions, I would use the Zoom web portal to review room status, alerts and configuration. I would also inspect the local room controller and device status. I have not administered Zoom Rooms directly.</p>
+            <div class="note-line">⚠️ Les vues disponibles dépendent des droits.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. A Zoom Room cannot join a meeting. What do you check?</p>
+            <p class="ans">I would check the meeting details, room controller, application status, network connection and any error message. I would test an approved alternative joining method and keep the organiser informed. I would document the issue afterwards.</p>
+            <div class="note-line">⚠️ Ne pas redémarrer sans tenir compte de la réunion.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. What is a Microsoft Teams Rooms resource account?</p>
+            <p class="ans">It is an account associated with a meeting room, typically used with room calendars and meeting services. Its configuration and licensing are managed according to the organisation’s Microsoft 365 setup.</p>
+            <div class="note-line">⚠️ Distinguer compte salle et compte utilisateur.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. What would you check if a Teams Room calendar is not showing meetings?</p>
+            <p class="ans">I would check the room’s network and sign-in status, the room resource account and calendar service status using approved tools, and look for a wider Microsoft 365 service issue. I would escalate account or policy changes.</p>
+            <div class="note-line">⚠️ Ne pas supposer une cause unique.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. What does BYOD mean in meeting rooms?</p>
+            <p class="ans">Bring Your Own Device means using a personal or corporate laptop to run the meeting while connecting to the room’s available display, camera or audio equipment. The exact connection method depends on the room design.</p>
+            <div class="note-line">⚠️ BYOD ne signifie pas accès libre aux équipements.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. What would you check on a Logitech, Poly or Neat video bar with no camera image?</p>
+            <p class="ans">I would check power, physical connections or network status as appropriate, privacy shutter or camera mute, selected camera in the conferencing application and any local error indicators. Then I would follow the model-specific documentation.</p>
+            <div class="note-line">⚠️ Fonctions différentes selon modèle.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. Why might screen sharing fail even when the call works?</p>
+            <p class="ans">Screen sharing uses a separate capture or presentation path. I would check the laptop output, adapter, input selection, application permissions and room routing. I would test with a known-good source and look for EDID or HDCP issues only when the symptoms suggest them.</p>
+            <div class="note-line">⚠️ Ne pas commencer par des réglages complexes.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec03">03 — AV: real troubleshooting questions</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. Remote participants hear an echo.</p>
+            <p class="ans">I would check whether a laptop in the room is also connected with its microphone or speakers active. I would mute or disconnect duplicate audio paths, then inspect microphone placement, speaker levels and echo-cancellation settings through the documented process.</p>
+            <div class="note-line">⚠️ Ne pas confondre echo et feedback acoustique.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. There is high-pitched microphone feedback.</p>
+            <p class="ans">I would reduce or mute the affected microphone channel, check speaker-to-microphone positioning and gain levels, then restore the audio gradually. If the system uses a DSP, I would inspect its configured levels with an authorised technician.</p>
+            <div class="note-line">⚠️ Larsen = boucle acoustique ; la priorité est de supprimer la boucle.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. They can hear us, but we cannot hear them.</p>
+            <p class="ans">I would check the selected speaker or output device, volume and mute state, then the conferencing application and room audio routing. If the local audio path looks correct, I would investigate the call and network side or escalate.</p>
+            <div class="note-line">⚠️ Sens précis : audio entrant défaillant.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. We can hear them, but they cannot hear us.</p>
+            <p class="ans">I would check the microphone mute state, selected input device, physical connection and input levels. I would test the microphone locally if possible. I would not rule out network or conferencing issues just because incoming audio works.</p>
+            <div class="note-line">⚠️ Correction d’une affirmation trop catégorique dans la fiche source.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. The camera shows a black screen.</p>
+            <p class="ans">I would check whether the camera has power, whether privacy shutter or mute is enabled, and whether the correct camera is selected. Then I would inspect the connection, application permissions and device status. I would test with a known-good cable or peripheral if authorised.</p>
+            <div class="note-line">⚠️ Ne pas réinstaller des pilotes à l’aveugle.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. The laptop shows no signal on the display.</p>
+            <p class="ans">I would verify the display input, cable and adapter, then the laptop’s display mode using Windows plus P. I would try a known-good connection and check resolution or refresh rate. If necessary I would investigate an EDID or handshake issue.</p>
+            <div class="note-line">⚠️ Windows+P : Duplicate/Extend.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. The touch controller is offline.</p>
+            <p class="ans">I would check its power, PoE if applicable, Ethernet or Wi-Fi status, and IP connectivity. I would check whether the room compute or appliance is online, review any error messages and follow the documented restart or escalation procedure.</p>
+            <div class="note-line">⚠️ Ne pas redémarrer une salle en réunion sans validation.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. A firmware update fails.</p>
+            <p class="ans">I would stop making further changes, check the vendor’s documented recovery procedure and the device status, and escalate to the AV lead or vendor as required. Firmware updates should be planned, tested and scheduled to avoid critical meetings.</p>
+            <div class="note-line">⚠️ Rollback pas toujours possible : ne pas le promettre.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q9. The meeting room cannot reach Zoom or Teams.</p>
+            <p class="ans">I would first distinguish a room-specific fault from a wider service incident. I would check device connectivity, DNS, time synchronisation, authentication and any displayed error, then verify the approved service status and escalate to the relevant team.</p>
+            <div class="note-line">⚠️ Pas de contournement de pare-feu.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec04">04 — Desktop: Windows, M365, identity and support</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. How do you troubleshoot a Windows PC that cannot connect to the network?</p>
+            <p class="ans">I would check whether the issue affects one device or multiple users, then verify the physical or wireless connection, IP address, default gateway and DNS configuration. I would use ipconfig, ping and nslookup as appropriate, check recent changes and escalate if it is a wider network issue.</p>
+            <div class="note-line">⚠️ Distinguer connectivité IP et résolution DNS.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. What would you use Event Viewer for?</p>
+            <p class="ans">Event Viewer lets me inspect Windows event logs, including System and Application events. I would correlate timestamps and error messages with the reported issue, rather than assume every warning is the cause.</p>
+            <div class="note-line">⚠️ Journaux système et applicatifs.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. What does Active Directory do?</p>
+            <p class="ans">Active Directory Domain Services manages domain identities, groups, computers and access in a Windows environment. In support work, I would use the authorised tools to check account status, group membership and relevant permissions.</p>
+            <div class="note-line">⚠️ Exemple APSI précis à raconter uniquement si confirmé.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. What is a Group Policy Object?</p>
+            <p class="ans">A Group Policy Object applies centrally managed settings to users and computers in an Active Directory environment. I can check applied policies using gpresult and investigate why a policy may not be applying.</p>
+            <div class="note-line">⚠️ gpresult /r ; droits et procédures.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. What is Microsoft Entra ID?</p>
+            <p class="ans">Microsoft Entra ID is Microsoft’s cloud identity and access-management service, formerly called Azure Active Directory. It supports authentication, application access and security controls such as Conditional Access.</p>
+            <div class="note-line">⚠️ Entra ID ≠ AD DS, même si intégrations possibles.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. What is Microsoft 365 support?</p>
+            <p class="ans">It can include troubleshooting sign-in, licences, Outlook, Teams, OneDrive and access to services, within the permissions of the support role. I would check whether the problem is user-specific, device-specific or service-wide.</p>
+            <div class="note-line">⚠️ Préparer un cas réel de licence ou de compte.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. How would you troubleshoot SharePoint permissions?</p>
+            <p class="ans">I would confirm the exact site or file, the user’s identity and the access required. Then I would check the relevant group or sharing permissions and whether access is inherited. I would only make changes with appropriate approval.</p>
+            <div class="note-line">⚠️ Ne pas donner des droits plus larges que nécessaire.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. What are Intune, Autopilot and Configuration Manager?</p>
+            <p class="ans">Intune is a cloud-based endpoint-management service. Windows Autopilot helps provision and configure Windows devices. Microsoft Configuration Manager manages operating-system deployment, software, updates and devices in managed environments. Their capabilities overlap, but they are not simply cloud and on-premise versions of the same product. I have not claimed hands-on administration of these tools.</p>
+            <div class="note-line">⚠️ Correction SCCM.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q9. A user profile is corrupted. What do you do?</p>
+            <p class="ans">I would confirm that the issue is profile-specific, protect the user’s data and check the relevant logs and policies. Depending on the environment, I might rebuild the profile through an approved procedure. I would not reimage the whole computer without assessing the cause and impact.</p>
+            <div class="note-line">⚠️ Ne pas créer de profil sans sauvegarde ni procédure.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q10. A BitLocker recovery screen appears.</p>
+            <p class="ans">I would verify the user and device, identify the recovery-key process approved by the organisation, and retrieve the key only if authorised and available in the configured recovery store. I would not bypass encryption or assume the key is always recoverable.</p>
+            <div class="note-line">⚠️ AD/Entra selon déploiement.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q11. A user has lost access to MFA.</p>
+            <p class="ans">I would verify identity using the organisation’s approved procedure, check whether a permitted recovery method exists, and involve the authorised identity team to reset or re-register authentication factors. I would never bypass MFA for convenience.</p>
+            <div class="note-line">⚠️ MFA sécurité.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q12. How would you explain your GLPI experience?</p>
+            <p class="ans">At APSI, I introduced GLPI to structure IT support and incident tracking. It helped centralise requests and identify recurring problems. We reported an approximate thirty-percent reduction in recurring incidents. I would explain the measurement method only to the extent I can substantiate it.</p>
+            <div class="note-line">⚠️ Chiffre historique à contextualiser ; ne pas inventer de méthode de mesure.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q13. Give us an example of a Level 2 Windows incident.</p>
+            <p class="ans">I can describe a real case by explaining the symptoms, what I checked, the tools I used, the root cause and the outcome. I would not invent an incident or claim a result I cannot substantiate.</p>
+            <div class="note-line">⚠️ À remplacer par 2 incidents Windows réellement vécus.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec05">05 — Network and computing: rapid answers</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. What is an IP address?</p>
+            <p class="ans">An IP address identifies a network interface within an IP network and allows devices to exchange packets.</p>
+            <div class="note-line">⚠️ IPv4 et IPv6.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. What is a default gateway?</p>
+            <p class="ans">It is the router a device uses to reach destinations outside its local subnet.</p>
+            <div class="note-line">⚠️ Passerelle locale.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. What is DNS?</p>
+            <p class="ans">The Domain Name System resolves names such as example.com into IP addresses and provides other records used by network services.</p>
+            <div class="note-line">⚠️ nslookup.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. What is DHCP?</p>
+            <p class="ans">Dynamic Host Configuration Protocol automatically provides IP configuration such as an address, subnet mask, gateway and DNS servers.</p>
+            <div class="note-line">⚠️ ipconfig /all.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. What is a firewall?</p>
+            <p class="ans">A firewall controls network traffic according to defined security rules. It can operate on a device or within the network.</p>
+            <div class="note-line">⚠️ Ne jamais désactiver sans autorisation.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. What is a VLAN?</p>
+            <p class="ans">A Virtual LAN separates devices into logical Layer 2 network segments on shared switching infrastructure. Routing and access rules determine communication between VLANs.</p>
+            <div class="note-line">⚠️ VLAN ne garantit pas à lui seul sécurité/QoS.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. What is a WAN?</p>
+            <p class="ans">A Wide Area Network connects networks across different locations.</p>
+            <div class="note-line">⚠️ Ne pas inventer l’architecture Paris-Londres.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. What is a SAN?</p>
+            <p class="ans">A Storage Area Network provides servers with access to shared block-level storage, often over dedicated storage networking technologies.</p>
+            <div class="note-line">⚠️ SAN ≠ NAS.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q9. What is a device driver?</p>
+            <p class="ans">A driver is software that enables the operating system to communicate with a hardware device.</p>
+            <div class="note-line">⚠️ Gestionnaire de périphériques.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q10. What is the difference between malware and a virus?</p>
+            <p class="ans">Malware is the general term for malicious software. A virus is a type of malware that can replicate by infecting other files or programs.</p>
+            <div class="note-line">⚠️ Ransomware est aussi un type de malware.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q11. What is a virtual machine?</p>
+            <p class="ans">A virtual machine is a software-defined computer that runs an operating system using virtual hardware provided by a hypervisor.</p>
+            <div class="note-line">⚠️ Hyper-V, VMware : exemples, pas expérience revendiquée.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q12. Thin versus thick provisioning?</p>
+            <p class="ans">Thin provisioning allocates storage capacity as data is written. Thick provisioning reserves the configured capacity in advance, although implementation details vary by platform.</p>
+            <div class="note-line">⚠️ Attention au risque de surallocation thin.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q13. Which command-line tools would you use?</p>
+            <p class="ans">I would use ipconfig /all for IP settings, ping for basic reachability, nslookup for DNS resolution, tracert for route diagnostics, whoami for identity context and gpresult for applied Group Policy. I would interpret results carefully because ICMP can be blocked.</p>
+            <div class="note-line">⚠️ Commandes Windows.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Commandes Windows — à savoir expliquer en anglais</p>
             <ul>
-                            <li><strong>22 years</strong> at APSI — a <strong>healthcare association</strong> (never "IT services company").</li>
-                            <li><strong>~300 workstations</strong>, multiple sites.</li>
-                            <li><strong>Board meeting, ~130 people</strong> — "I managed microphones, replaced low batteries and adjusted audio levels to help the meeting run smoothly."</li>
-                            <li><strong>GLPI</strong> — inventory, asset tracking, maintenance records, licence visibility, reporting. ~30% = <strong>incident resolution time</strong> (discussed in practice, no exact figures).</li>
-                            <li><strong>AnyDesk</strong> — remote interventions, fewer trips between sites.</li>
-                            <li><strong>Active Directory</strong> — limited exposure; GLPI–AD integration planned, not completed.</li>
-                            <li><strong>Le Wagon 2022</strong>, <strong>Java/Spring/Angular 2023</strong> (Aston).</li>
-                            <li><strong>Interview:</strong> Thursday 29 October 2026, 11:30 am Paris — Teams — rue de Courcelles.</li>
-                        </ul>
+                <li><code>ipconfig /all</code> — “Shows detailed IP configuration, DNS servers, DHCP information and adapters.”</li>
+                <li><code>ping &lt;host&gt;</code> — “Tests basic reachability and round-trip time, although ICMP may be blocked.”</li>
+                <li><code>nslookup &lt;name&gt;</code> — “Checks how a DNS name resolves and which DNS server responds.”</li>
+                <li><code>tracert &lt;host&gt;</code> — “Shows the route hops toward a destination when intermediate devices respond.”</li>
+                <li><code>whoami /all</code> — “Shows the current identity, group memberships and security privileges.”</li>
+                <li><code>gpresult /r</code> — “Summarises Group Policy applied to the user and computer.”</li>
+                <li><code>netstat -ano</code> — “Lists connections and listening ports with process IDs.”</li>
+                <li><code>Test-NetConnection &lt;host&gt; -Port 443</code> — “Tests TCP connectivity to a specific service port using PowerShell.”</li>
+                <li><code>sfc /scannow</code> — “Checks and attempts to repair protected Windows system files.”</li>
+            </ul>
         </div>
-
+    </div>
+    <button class="accordion" id="sec06">06 — Security, escalation and teamwork</button>
+    <div class="panel">
         <div class="qa">
-            <p class="q">11.4: The board-meeting sentence (use verbatim) <span class="badge essential">Essential</span></p>
-            <p>"At APSI, I supported a board meeting with around 130 people. I managed microphones, replaced low batteries and adjusted audio levels to help the meeting run smoothly."</p>
+            <p class="q">Q1. You suspect ransomware. What do you do?</p>
+            <p class="ans">I would treat it as a security incident, follow the incident-response procedure, isolate the affected device as directed, and notify the security team immediately. I would avoid deleting evidence, experimenting with files or rebooting without instruction.</p>
+            <div class="note-line">⚠️ Préservation des preuves.</div>
         </div>
-
         <div class="qa">
-            <p class="q">11.5: TO BE COMPLETED before the interview <span class="badge essential">Essential</span></p>
+            <p class="q">Q2. A VIP asks for your admin password.</p>
+            <p class="ans">I would never share credentials. I would explain that I must follow the same security controls for everyone and help through an approved alternative or escalation path.</p>
+            <div class="note-line">⚠️ Sécurité sans exception de rang.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. A user wants to plug in an unknown USB drive.</p>
+            <p class="ans">I would follow the organisation’s removable-media policy and would not connect an unapproved device. If there is an urgent business need, I would seek an approved secure transfer method.</p>
+            <div class="note-line">⚠️ Ne pas improviser.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. A senior asks you to skip the ticket.</p>
+            <p class="ans">I would focus on resolving the urgent impact, but I would still document the incident according to policy. If logging must happen immediately, I would follow that requirement rather than assume I can postpone it.</p>
+            <div class="note-line">⚠️ La fiche source disait « logger ensuite » ; les procédures réelles peuvent différer.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q5. You disagree with a documented procedure.</p>
+            <p class="ans">I would follow the current approved procedure unless it creates an immediate safety or security concern. I would raise the issue privately with Alex, explain the evidence and suggest an improvement through the proper channel.</p>
+            <div class="note-line">⚠️ Ni désobéissance ni passivité.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q6. You accidentally damage expensive equipment.</p>
+            <p class="ans">I would report it immediately, explain exactly what happened, secure the equipment if necessary and follow the incident and replacement process. Transparency is essential.</p>
+            <div class="note-line">⚠️ Ne pas dissimuler.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q7. You do not know how to fix an issue.</p>
+            <p class="ans">I would say what I know, explain what I have checked and escalate early with useful diagnostic details. I would keep the user informed and learn from the resolution.</p>
+            <div class="note-line">⚠️ Ne pas inventer.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q8. How do you prioritise several incidents?</p>
+            <p class="ans">I would consider business impact, urgency, security and the organisation’s incident-priority rules, not simply the seniority of the requester. I would communicate delays and escalate when necessary.</p>
+            <div class="note-line">⚠️ Impact business + sécurité.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q9. How would you work with a remote London team?</p>
+            <p class="ans">I would keep tickets accurate, communicate concise updates, document the room setup and troubleshooting steps, and escalate with evidence. I would respect the team’s standards and handover process.</p>
+            <div class="note-line">⚠️ Ne pas prétendre connaître leurs outils internes.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q10. What should an escalation include?</p>
+            <p class="ans">I would include the affected room or device, symptoms, start time, business impact, error messages, checks performed, results, workaround, current status and the action required from the next team.</p>
+            <div class="note-line">⚠️ Un ticket exploitable.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec07">07 — Closing, recruiter rules and follow-up</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">Q1. Do you have any questions for us?</p>
+            <p class="ans">Yes, thank you. What does the morning room-check routine look like in the Paris office? / What kinds of events require the most AV support here?</p>
+            <div class="note-line">⚠️ Choisir une ou deux questions.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q2. What about salary, rates or next steps?</p>
+            <p class="ans">Natalie is coordinating the contractual and recruitment details, so I am happy to follow up with her separately.</p>
+            <div class="note-line">⚠️ Ne pas aborder spontanément ces sujets.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q3. How do you close the interview?</p>
+            <p class="ans">Thank you, Alex, Adeal and German. I have enjoyed learning more about the team and the role. The combination of AV and desktop support is very interesting to me. Thank you for your time.</p>
+            <div class="note-line">⚠️ Rester bref.</div>
+        </div>
+        <div class="qa">
+            <p class="q">Q4. What should I email Natalie and Kim afterwards?</p>
+            <p class="ans">Hi Natalie and Kim, I have just finished the interview with Alex, Adeal and German. We discussed [actual topics]. I felt [honest assessment], and I would like to clarify [only if relevant]. I remain interested in the opportunity. Thank you again for arranging the conversation. Best regards, Lucas</p>
+            <div class="note-line">⚠️ Remplacer les crochets avec les faits après l’entretien. Pas d’appel à Natalie.</div>
+        </div>
+    </div>
+    <button class="accordion" id="sec13">13. Exemples personnels à compléter — sans invention</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">13. Exemples personnels à compléter — sans invention</p>
+            <p>Ces éléments ne doivent pas être récités comme des incidents réels tant que les faits ne sont pas confirmés.</p>
+        </div>
+        <div class="qa">
+            <p class="q">APSI — contrôle AV préventif</p>
             <ul>
-                            <li>Salary range (Q1.11)</li>
-                            <li>Notice period / start date (Q1.12)</li>
-                            <li>Personal incident example (Q8.7)</li>
-                            <li>Disagreement-with-colleague example (Q9.4)</li>
-                            <li>Confirm the ~30% resolution-time figure before quoting it (Q8.3)</li>
-                            <li>Confirm the exact scope of your Active Directory exposure (Q8.5)</li>
-                        </ul>
+                <li><strong>Situation :</strong> [lieu, type de salle, événement]</li>
+                <li><strong>Matériel réellement utilisé :</strong> [à confirmer]</li>
+                <li><strong>Tests réellement effectués :</strong> [compte test ? deux connexions ? micros ? batteries ? niveau sonore ?]</li>
+                <li><strong>Anomalie observée :</strong> [à compléter]</li>
+                <li><strong>Action / résultat :</strong> [à compléter]</li>
+            </ul>
+        </div>
+        <div class="qa">
+            <p class="q">APSI — incident AV pendant une réunion</p>
+            <ul>
+                <li><strong>Symptôme / impact :</strong> [à compléter]</li>
+                <li><strong>Diagnostic :</strong> [à compléter]</li>
+                <li><strong>Contournement / résolution :</strong> [à compléter]</li>
+                <li><strong>Résultat vérifiable :</strong> [à compléter]</li>
+            </ul>
+        </div>
+        <div class="qa">
+            <p class="q">APSI — deux incidents Windows / réseau N2</p>
+            <ul>
+                <li><strong>Incident 1 :</strong> [symptôme → tests → cause → correction → résultat]</li>
+                <li><strong>Incident 2 :</strong> [symptôme → tests → cause → correction → résultat]</li>
+            </ul>
+        </div>
+        <div class="qa">
+            <p class="q">APSI — GLPI et réduction des incidents</p>
+            <ul>
+                <li><strong>Déploiement et usage de GLPI :</strong> expérience déclarée.</li>
+                <li><strong>Réduction estimée des incidents récurrents :</strong> environ 30 % selon le parcours communiqué ; ne pas inventer la méthode de mesure.</li>
+                <li><strong>Mesure réelle disponible :</strong> [à confirmer : période, périmètre, volume, source].</li>
+            </ul>
+        </div>
+        <div class="qa">
+            <p class="q">Barre de conférence LG / L'Escalator</p>
+            <ul>
+                <li><strong>Lieu et contexte :</strong> [à confirmer]</li>
+                <li><strong>Référence de l'équipement :</strong> [à confirmer]</li>
+                <li><strong>Manipulations effectuées :</strong> [à confirmer]</li>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion" id="sec14">❓ 14 Questions to ask &amp; interview rules</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">❓ 14 Questions to ask &amp; interview rules</p>
+            <p><strong>Questions recommandées :</strong></p>
+            <p><strong>Conduite :</strong> laisser Alex mener ; répondre à la question, puis donner un exemple réel et s'arrêter. Être chaleureux et calme, ne pas débattre des procédures internes. Si une question est ambiguë : <em>“Could you give me a bit more context so I answer the right question?”</em></p>
+            <p><strong>Éviter d'aborder spontanément :</strong> rémunération, statut de société, calendrier de recrutement, prochaines étapes ; ces sujets sont gérés par la recruteuse.</p>
+            <p><strong>Après l'entretien :</strong> écrire rapidement à Natalie Bowers et Kim Miller pour indiquer le déroulement, les questions posées, les points moins bien réussis et ton intérêt confirmé ou non. Selon la consigne rapportée, pas d'appel à Natalie pendant son déplacement.</p>
+            <p class="ans">What does the morning room check look like in Paris at the moment?</p>
+            <p class="ans">What kind of events does the Paris office run, and how much AV support do they usually need?</p>
+            <p class="ans">How does the Paris team coordinate AV incidents with London?</p>
+        </div>
+    </div>
+    <button class="accordion" id="sec15">15. Antisèche — juste avant de rejoindre Teams</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">15. Antisèche — juste avant de rejoindre Teams</p>
+            <ul>
+                <li><strong>11 h 25 :</strong> connexion, micro, caméra, fond neutre, téléphone silencieux.</li>
+                <li><strong>Introduction :</strong> APSI ~22 ans, ~300 postes, systèmes/réseaux/support ; compétences récentes dev/Linux ; motivation pour AV + Desktop.</li>
+                <li><strong>Salle en panne :</strong> power → input → cables → mic/camera → réseau → workaround autorisé → communiquer → ticket/escalade.</li>
+                <li><strong>Echo :</strong> vérifier double connexion audio, microphones, haut-parleurs, routage, AEC.</li>
+                <li><strong>Pas d'image :</strong> source écran, câble/port, résolution, EDID/HDCP, périphérique, application.</li>
+                <li><strong>Crestron :</strong> contrôle de salle ; distinguer touch panel, processeur, écran, transport AV.</li>
+                <li><strong>Q-SYS :</strong> audio/DSP, Core, signal flow, mute/gain/routage, réseau.</li>
+                <li><strong>Zoom / Teams Rooms :</strong> room compute/appliance, contrôleur, périphériques, compte salle, calendrier, réseau, supervision.</li>
+                <li><strong>Desktop :</strong> Windows, AD/Entra, M365, Event Viewer, GLPI, <code>ipconfig</code>, <code>nslookup</code>, GPO.</li>
+                <li><strong>Sécurité :</strong> ne jamais contourner les contrôles pour un VIP ; impact métier + confidentialité + procédures.</li>
+                <li><strong>Formule clé :</strong> <em>“I haven't administered that platform directly, but I understand its role and I'd follow the documented troubleshooting procedure.”</em></li>
+            </ul>
+        </div>
+    </div>
+    <button class="accordion" id="sec16">🛡️ 16 Reliability notes &amp; corrections</button>
+    <div class="panel">
+        <div class="qa">
+            <p class="q">🛡️ 16 Reliability notes &amp; corrections</p>
+            <p><em>Document de révision compilé depuis les fiches fournies. Les réponses anglaises sont des formulations d'entraînement, à adapter à la question réellement posée.</em></p>
+            <ol>
+                <li><strong>Crestron / Q-SYS / Zoom Rooms / Teams Rooms / Intune / Autopilot :</strong> connaissances théoriques et diagnostic générique, pas d'expérience d'administration directe confirmée.</li>
+                <li><strong>One-way audio :</strong> une direction audio fonctionnelle ne suffit pas à exclure un problème réseau ou de service.</li>
+                <li><strong>Configuration Manager / Intune :</strong> technologies de gestion complémentaires avec recouvrements ; pas des équivalents stricts.</li>
+                <li><strong>BitLocker :</strong> une clé de récupération peut être conservée dans AD DS, Entra ID ou un autre dépôt selon la configuration ; vérifier l'identité et la procédure avant toute récupération.</li>
+                <li><strong>Ransomware :</strong> appliquer le plan de réponse à incident ; isoler selon la procédure, préserver les preuves et prévenir la sécurité, sans improviser une restauration.</li>
+                <li><strong>Firmware :</strong> ne pas mettre à jour une salle critique sans fenêtre approuvée, sauvegarde et procédure de récupération adaptée ; le retour arrière n'est pas toujours possible.</li>
+                <li><strong>VLAN :</strong> sépare logiquement les réseaux ; la qualité audio/vidéo dépend aussi du dimensionnement et de la QoS, pas du VLAN seul.</li>
+                <li><strong>Evercore :</strong> ne pas affirmer connaître les marques, topologies, VLAN, contrôleurs ou procédures réellement déployés à Paris sans fiche de poste ou preuve directe.</li>
+                <li><strong>APSI :</strong> ne pas transformer les formulations préparatoires en faits autobiographiques non confirmés.</li>
+            </ol>
         </div>
     </div>
 
-    <!-- ========================================
-         12 — TECHNICAL REFERENCE
-    ======================================== -->
-    <button class="accordion" id="g12">12 📚 Technical reference</button>
+<button class="accordion" id="g12">12 📚 Technical reference</button>
     <div class="panel">
         <div class="group-intro">Deep material, integrated in this same file. These sections stay folded — open them only when you want detail behind the trainer answers.</div>
 
