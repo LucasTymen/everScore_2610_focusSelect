@@ -1,0 +1,16 @@
+# Artefacts Windows (fichiers téléchargés)
+*:Zone.Identifier
+*:Zone.Identifier:$DATA
+
+# macOS
+.DS_Store
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Sauvegardes locales
+*.bak
+*.orig
