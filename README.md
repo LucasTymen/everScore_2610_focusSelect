@@ -2,11 +2,14 @@
 
 Preparation dashboard for the interview on **Thursday 29 October 2026, 11:30 am** (Paris time) — Microsoft Teams, ~1 hour, **in English** — with Alex Dyson (AV Support Lead EMEA/APAC), Adeal Hafeez (Desktop Engineer, London) and German Moura (AV Technician). Role: **AV & IT Support Technician**, Evercore Paris (rue de Courcelles). Recruiter: Natalie Bowers.
 
-## Files
+## Files — ONE single file
 
-- `Evercore_AV_IT_Support_Technician.html` — **the main interactive preparation dashboard** (fully in English; opens directly in a browser; jQuery loaded from a CDN).
-- `index.html` — redirect to the dashboard (Vercel serves this name at the root).
-- `.gitignore` — Windows/macOS artefacts, editors, backups.
+- `index.html` — **the entire preparation dashboard, in one autonomous file** (opens directly in a browser, jQuery from CDN, ~360 KB):
+  - **Groups 01–11**: the interview trainer (topic-based, ~105 questions, short answer visible directly under every question, one optional Details button, difficulty badges, clickable table of contents, search)
+  - **Group 12**: the full technical reference (candidate profile, availability, 92 programming Q&A, glossary, EV0–EV14 deep material) — folded by default, same file
+  - **All groups open on page load** — maximum visibility; Details and reference sections stay folded until you click
+- `vercel.json` — static deployment config (cleanUrls)
+- `.gitignore` — Windows/macOS artefacts, editors, backups
 
 ## Structure — 19 sections, ~330 collapsible entries
 
@@ -41,16 +44,11 @@ Every EV section starts with a **⚡ QUICK ANSWER** — a short, spoken-English 
 3. **EV0** — 60-second pitch, spoken without notes
 4. Then EV4, EV12, and EV14 (salary, five-year plan, notice period — complete the TO BE COMPLETED blocks first)
 
-## V4 — Interview Trainer (main interface)
 
-- `Evercore_Interview_Trainer_V4.html` — **the primary revision tool**: 12 topic groups, ~105 questions, every question in SHORT ANSWER FIRST format (short spoken answer → IF THEY ASK MORE → technical note → keywords → difficulty badge). Every short answer is visible directly under its question (no clicking); one "Details" button per question; clickable table of contents; expand/collapse and search in the toolbar. Corrections applied: APSI healthcare association, GLPI ~30% = incident resolution time (no invented figures), AnyDesk, limited Active Directory exposure, room-configuration AV experience.
-- `index.html` redirects to the V4 trainer.
-- `Evercore_AV_IT_Support_Technician.html` — full technical reference (retained, linked from group 12 of the trainer, outside the primary revision path).
-- `v4_refactor.patch` — unified diff of the V4 refactor (index.html change + trainer file addition).
 
 ## Vercel deployment (repo name: everScore_2610_focusSelect)
 
-The project is a static site — no build step required. `index.html` is the entry point: Vercel serves it at the root, and it redirects to `Evercore_Interview_Trainer_V4.html` (the main trainer). `vercel.json` enables clean URLs (`.html` extension removed) — all internal links keep working.
+The project is a static site — no build step required. `index.html` is the entry point: Vercel serves it at the root, and it redirects to `index.html` (the main trainer). `vercel.json` enables clean URLs (`.html` extension removed) — all internal links keep working.
 
 **Deploy steps:**
 
