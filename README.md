@@ -11,18 +11,22 @@ Preparation dashboard for the interview on **Thursday 29 October 2026, 11:30 am*
 - `vercel.json` — static deployment config (cleanUrls)
 - `.gitignore` — Windows/macOS artefacts, editors, backups
 
-## Structure — 19 sections, ~330 collapsible entries
+## Structure — 12 topic groups (all in index.html)
 
-**Base sections (0–3):**
-- **0. 👤 Candidate Profile** — background, three skill sets, recent projects, contact
-- **1. 📑 Availability & Practical Details**
-- **2. 💻 Programming & Scripting** — 92 Q&A: Python (14), Django (15), Java (15), Spring Boot (15), Angular (15), Core Concepts (18) — each with Definition / Example / Use case
-- **3. 📖 Abbreviations Glossary** — 7 categories
+- **01 Introduction & motivation** — pitch, why Evercore, salary/notice (12 Q)
+- **02 AV daily operations** — morning checks, room setup per event, microphones/batteries (9 Q)
+- **03 AV systems** — Zoom/Teams Rooms, Crestron, Q-SYS, peripherals (11 Q)
+- **04 AV troubleshooting** — 11 scenarios in CHECK → TEST → WORKAROUND → INFORM → LOG format
+- **05 Windows & desktop** — drivers, sound, docks, sign-in, M365 (13 Q)
+- **06 Networking** — one-line definitions (DNS, DHCP, VLAN…) + command sequence (12 Q)
+- **07 Security & infrastructure** — malware, suspicious attachments, VMs, ITIL, PowerShell (8 Q)
+- **08 APSI experience** — 22 years, GLPI (resolution time), AnyDesk, limited AD exposure, board meeting (8 Q)
+- **09 Behavioural** — pressure, seniors, escalation, procedures (9 Q)
+- **10 Interview simulation** — expected focus per interviewer (Alex · Adeal · German)
+- **11 Quick revision** — 12 flashcard definitions, reflex sentences, numbers to remember, TO-BE-COMPLETED checklist
+- **12 Technical reference — full material** (folded): candidate profile, availability, 92 programming Q&A, glossary, EV0–EV14 deep content
 
-**Evercore interview sections (EV0–EV14), English answers + short notes:**
-EV0 Introduction & Background (pitch 60/90 s) · EV1 AV Fundamentals · EV2 Crestron · EV3 Q-SYS · EV4 Zoom Rooms & Teams Rooms · EV5 Logitech/Poly/Neat · EV6 Windows & Desktop Support L2 · EV7 Networking (concepts + 8 commands) · EV8 14 troubleshooting scenarios · EV9 Security & Procedures · EV10 APSI Experience & Behavioural · EV11 Questions to Ask · EV12 English Interview Phrases · EV13 Technical References · EV14 Recruiter Check (salary, 5-year plan, physical work, on-call, ITSM, "why you over a Crestron candidate").
-
-Every EV section starts with a **⚡ QUICK ANSWER** — a short, spoken-English answer with keywords.
+Every trainer question: **short answer visible directly** under the question (10–25 words, spoken British English), one optional **Details** button, difficulty badge (Essential/Useful/Advanced). Contents menu + search at the top; all groups open on page load.
 
 ## Facts policy
 
