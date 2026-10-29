@@ -4,7 +4,7 @@ Preparation dashboard for the interview on **Thursday 29 October 2026, 11:30 am*
 
 ## Files — ONE single file
 
-- `index.html` — **the entire preparation dashboard, in one autonomous file** (opens directly in a browser, jQuery from CDN, ~360 KB):
+- `index.html` — **the entire preparation dashboard, in one autonomous file** (opens directly in a browser, fully self-contained — jQuery embedded inline, no CDN, no internet needed, ~450 KB):
   - **Groups 01–11**: the interview trainer (topic-based, ~105 questions, short answer visible directly under every question, one optional Details button, difficulty badges, clickable table of contents, search)
   - **Group 12**: the full technical reference (candidate profile, availability, 92 programming Q&A, glossary, EV0–EV14 deep material) — folded by default, same file
   - **All groups open on page load** — maximum visibility; Details and reference sections stay folded until you click
